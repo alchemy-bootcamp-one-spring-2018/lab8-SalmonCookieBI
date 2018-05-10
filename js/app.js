@@ -25,7 +25,6 @@ let cookieArray = [pike, seatac, center, capitol, alki];
 // Get some random digits
 for(let i in cookieArray) {
     cookieArray[i].cookieData();
-    // console.log('random cookies', cookieArray[i].cookies);
 }
 
 // Header/Footer stuff
@@ -35,7 +34,6 @@ function header() {
 
 function footer() {
     addUp();
-    // console.log(totals);
     render(totals, 'body', 'body-total');
 }
 
@@ -43,12 +41,7 @@ function footer() {
 header();
 update();
 
-// let random = document.getElementById('randomize-btn');
 document.getElementById('randomize-btn').addEventListener('click', randomize);
-// // document.getElementById('randomize-btn').onclick('randomize');
-
-
-
 
 function addUp() {
     // Reset totals
@@ -57,10 +50,8 @@ function addUp() {
     for(let i = 1; i < 16; i++) {
         totals[i] = 0;
         for(let j in cookieArray) {
-            // console.log('cookies', cookieArray[j].cookies[i], 'j', j, 'i', i);
             totals[i] += cookieArray[j].cookies[i];
         }
-        // console.log('totals', totals);
     }
 }
 
