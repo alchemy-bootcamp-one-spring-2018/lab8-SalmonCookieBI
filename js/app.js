@@ -1,15 +1,16 @@
-let headerArray = ['Location', 'Type', 'Stock', 'Cost', 'Price', 'Profit'];
+'use strict';
+// Build Times
 
-// Build the open times array
-let times = [];
-times.push('Location');
+let times = ['Location']
 for(let i = 6; i < 13; i++) {
-    times.push(i + 'am');
+    times.push(i + ':00 AM');
 }
 for(let i = 1; i < 9; i++) {
-    times.push(i + 'pm');
+    times.push(i + ':00 PM');
 }
 console.log(times);
+
+
 
 let totals = [];
 
