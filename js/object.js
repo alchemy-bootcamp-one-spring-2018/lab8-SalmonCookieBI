@@ -9,16 +9,16 @@ class Cookie {
     }
 
     cookieData() {
-        this.cookies = [this.location];
+        this.people = [this.location];
         for(let i = 0; i < 15; i++) {
-            let tempAvg = Math.ceil(((Math.random() * parseInt(this.max) - parseInt(this.min)) + parseInt(this.min)) * this.avg);
+            let tempAvg = Math.ceil(((Math.random() * parseInt(this.max) - parseInt(this.min)) + parseInt(this.min)));
             console.log('max', this.max, 'min', this.min, 'avg', this.avg, 'temp', tempAvg);
-            this.cookies.push(tempAvg);
+            this.people.push(tempAvg);
         }
     }
 
     renderMe() {
-        render(this.cookies, 'body', 'body-data');
+        render(this.people, 'body', 'body-data');
     }
 
 }
