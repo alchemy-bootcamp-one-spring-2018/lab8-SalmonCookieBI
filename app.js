@@ -19,34 +19,21 @@ function randomCustomers(min, max) {
 // let totalQuantity = document.createElement('td');
 
 for(let i = 0; i < storeArray.length; i++) {
+
     let tableBody = document.getElementById('table-body');
+    let storeRow = document.createElement('tr');
+    tableBody.appendChild(storeRow);
 
-    let fruitRow = document.createElement('tr');
-
-    fruitRow.setAttribute('id', 'body-row-' + i);
-    tableBody.appendChild(fruitRow);
-
-    let nameCell = document.createElement('td');
-    nameCell.textContent = storeArray[i].fruitName;
-    fruitRow.appendChild(nameCell);
-
-    let colorCell = document.createElement('td');
-    colorCell.textContent = storeArray[i].fruitColor;
-    fruitRow.appendChild(colorCell);
-
-    let flavorCell = document.createElement('td');
-    flavorCell.textContent = storeArray[i].fruitFlavor;
-    fruitRow.appendChild(flavorCell);
-
-    let shapeCell = document.createElement('td');
-    shapeCell.textContent = storeArray[i].fruitShape;
-    fruitRow.appendChild(shapeCell);
-
-    let quantityCell = document.createElement('td');
-    quantityCell.textContent = storeArray[i].fruitQuantity;
-    fruitRow.appendChild(quantityCell);
-
-    // numberTotal += storeArray[i].fruitQuantity;
+    for( let j = 1; j < 15; j++) {
+        let customers = randomCustomers(storeArray[i].min, storeArray[i].max);
+        let cookiesToBake = customers * storeArray[i].avg;
+        let storeCell = document.createElement('td');
+        storeCell.textContent = cookiesToBake;
+        storeRow.appendChild(storeCell);
+        
+         
+        
+    }
 }
 
 // totalQuantity.textContent = numberTotal;
