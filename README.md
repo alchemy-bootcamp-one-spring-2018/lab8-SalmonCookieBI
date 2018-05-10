@@ -15,7 +15,7 @@ Because we are early in the life of this business, we will need to build an appl
 
 Pat needs you to take a leading role in doing the design work and construction of a public-facing page, too. Pat has a logo image picked out, but that's it. Yep, all you're getting to work off of is an illustration of a fish:
 
-![A salmon](salmon.png)
+![A salmon](./images/salmon.png)
 
 Pat has asked you to come up with all other aspects of the design for both documents, including a color scheme and a custom font, and maybe additional images, for a public-facing webpage.
 
