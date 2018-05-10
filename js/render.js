@@ -1,6 +1,6 @@
 'use strict';
 
-function render(array, tbId, rowId) {
+function render(array, tabId, rowId) {
     let tab = document.getElementById(tabId);
     let row = document.createElement('tr');
     row.id = rowId;
@@ -10,7 +10,4 @@ function render(array, tbId, rowId) {
         row.appendChild(data);
     }
     tab.appendChild(row);
-
-
-
 }
