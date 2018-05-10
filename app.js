@@ -11,30 +11,46 @@ let storeArray = [airport, pioneer, powells, stjohns, waterfront];
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function randomCustomers(min, max) {
-    return Math.random() * (max - min) + min;
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
 }
 
-// let numberTotal = 0;
-// let total = document.getElementById('total-row');
-// let totalQuantity = document.createElement('td');
+let hourCookieTotal = 0;
+let hourTotalRow = document.getElementById('table-foot');
+let hourTotal = document.createElement('td');
 
 for(let i = 0; i < storeArray.length; i++) {
-
+    let storeCookieTotal = 0;
+    let storeTotal = document.createElement('td');
+    
     let tableBody = document.getElementById('table-body');
     let storeRow = document.createElement('tr');
     tableBody.appendChild(storeRow);
 
-    for( let j = 1; j < 15; j++) {
+
+    let storeName = storeArray[i].storeLocation;
+    let storeNameCell = document.createElement('td');
+    storeNameCell.textContent = storeName;
+    storeRow.appendChild(storeNameCell);
+
+    for(let j = 0; j < 14; j++) {
         let customers = randomCustomers(storeArray[i].min, storeArray[i].max);
         let cookiesToBake = customers * storeArray[i].avg;
         let storeCell = document.createElement('td');
-        storeCell.textContent = cookiesToBake;
+
+        storeCell.textContent = Math.round(cookiesToBake);
         storeRow.appendChild(storeCell);
-        
-         
-        
+
+        console.log('store', storeName);
+        console.log('random customers', customers);
+
+        storeCookieTotal += Math.round(cookiesToBake);
+        storeTotal.textContent = storeCookieTotal;
+        storeRow.appendChild(storeTotal);
+
+        hourCookieTotal += Math.round(cookiesToBake);
+        hourTotal.textContent = hourCookieTotal;
+        hourTotalRow.appendChild(hourTotal);
     }
 }
-
-// totalQuantity.textContent = numberTotal;
-// total.appendChild(totalQuantity);
