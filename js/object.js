@@ -1,5 +1,4 @@
 'use strict';
-
 class Cookie {
 
     constructor(location, min, max, avg) {
@@ -17,12 +16,12 @@ class Cookie {
             console.log('max', this.max, 'min', this.min, 'avg', this.avg, 'temp', tempAvg);
             this.cookies.push(tempAvg);
         }
-        
-        // console.log('cookies are', this.cookies);
+        console.log('cookies are', this.cookies);
     }
 
     renderMe() {
-        // console.log('should render an object', tempArray);
+        console.log('should render an object', tempArray);
         render(this.cookies, 'body', 'body-data');
     }
+
 }
