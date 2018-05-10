@@ -74,7 +74,13 @@ function populateFooter(array) {
     tfoot.appendChild(clone);
     
 }
+function addRow() {
+    alert('ok');
+}
 
 randomCustomerAmount(shops);
 populateTable(shops);
 populateFooter(shops);
+
+const submit = document.getElementById('submit-button');
+submit.addEventListener('click', addRow, true);
