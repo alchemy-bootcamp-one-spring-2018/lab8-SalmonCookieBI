@@ -6,7 +6,6 @@ const cookieShops = [
         maxCustomer: 65,
         avgPerCustomer: 6.3,
     },
-
     {
         location: 'Pioneer Square',
         minCustomer: 3,
