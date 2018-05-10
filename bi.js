@@ -1,5 +1,4 @@
-/* exported locations */
-
+/* exported shops */
 'use strict';
 
 class BizData {
@@ -8,6 +7,7 @@ class BizData {
         this.max = max;
         this.avg = avg;
         this.customers = [];
+        this.cookies = [];
     }
 }
 
@@ -17,7 +17,7 @@ const powells = new BizData(11, 38, 3.7);
 const stJohns = new BizData(20, 38, 2.3);
 const waterfront = new BizData(2, 16, 4.6);
 
-const locations = [
+const shops = [
     pdxAirport,
     pioneerSquare,
     powells,
