@@ -1,5 +1,4 @@
 'use strict';
-
 class Cookie {
 
     constructor(location, min, max, avg) {
@@ -21,4 +20,5 @@ class Cookie {
     renderMe() {
         render(this.cookies, 'body', 'body-data');
     }
+
 }
