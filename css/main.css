@@ -68,12 +68,12 @@ input {
 table {
     border-collapse: collapse;
     border: 1px solid white;
-    background: rgba(0, 0, 0, 0);
+    background: #21ABA5;
     color: white;
 }
 
 #header, #body-total {
-    background: rgb(0, 0, 100);
+    background: #011F3F);
     font-weight: bold;
 }
 
@@ -82,7 +82,8 @@ table {
 }
 
 html {
-    background-color: black;
+    background-color:#163A5F;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 #footer #body-times{
@@ -109,3 +110,8 @@ table td {
     background: url('../images/salmon.png');
     animation: salmon-swim 30s linear infinite;
 }
+
+/* hover color */
+td:hover {
+    background-color: #429FFD;
+  }
