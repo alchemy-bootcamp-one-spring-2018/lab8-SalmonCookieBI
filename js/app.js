@@ -11,7 +11,6 @@ for(let i = 1; i < 9; i++) {
 console.log(times);
 
 
-
 let totals = [];
 
 // Instantiate cookie objects (Location, Min, Max, Avg)

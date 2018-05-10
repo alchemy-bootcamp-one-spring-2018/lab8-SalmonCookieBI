@@ -1,3 +1,5 @@
+'use strict';
+
 class Cookie {
 
     constructor(location, min, max, avg) {

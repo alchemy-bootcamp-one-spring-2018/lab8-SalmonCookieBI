@@ -1,3 +1,5 @@
+'use strict';
+
 // let inputsToAdd = ['<input id="txt-0" type="text">', '<input id="txt-1" type="text">', '<input id="txt-2" type="number">', '<input id="txt-3" type="number">', '<input id="txt-4" type="number">', '<input type="submit" onclick="addRow()">']
 // render(inputsToAdd, 'foot', 'footer');
 
