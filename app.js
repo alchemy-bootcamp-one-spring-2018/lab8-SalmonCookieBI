@@ -7,7 +7,6 @@ let stjohns = new StoreData('St Johns', 20, 38, 2.3);
 let waterfront = new StoreData('Waterfront', 2, 16, 4.6);
 
 let storeArray = [airport, pioneer, powells, stjohns, waterfront];
-// let hoursArray = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function randomCustomers(min, max) {
@@ -16,9 +15,9 @@ function randomCustomers(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-let hourCookieTotal = 0;
-let hourTotalRow = document.getElementById('table-foot');
-let hourTotal = document.createElement('td');
+let hourTotalArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let hourFooterTotal = document.getElementById('table-foot');
+let grandCookieTotal = 0;
 
 for(let i = 0; i < storeArray.length; i++) {
     let storeCookieTotal = 0;
@@ -42,15 +41,23 @@ for(let i = 0; i < storeArray.length; i++) {
         storeCell.textContent = Math.round(cookiesToBake);
         storeRow.appendChild(storeCell);
 
-        console.log('store', storeName);
-        console.log('random customers', customers);
-
         storeCookieTotal += Math.round(cookiesToBake);
         storeTotal.textContent = storeCookieTotal;
         storeRow.appendChild(storeTotal);
 
-        hourCookieTotal += Math.round(cookiesToBake);
-        hourTotal.textContent = hourCookieTotal;
-        hourTotalRow.appendChild(hourTotal);
+        hourTotalArray[j] += (Math.round(cookiesToBake));
+        console.log(hourTotalArray);
     }
 }
+
+for(let k = 0; k < hourTotalArray.length; k++) {
+    let hourCell = document.createElement('td');
+    hourCell.textContent = hourTotalArray[k];
+    hourFooterTotal.appendChild(hourCell);
+
+    grandCookieTotal += hourTotalArray[k];
+}
+
+let grandTotal = document.createElement('td');
+grandTotal.textContent = grandCookieTotal;
+hourFooterTotal.appendChild(grandTotal);
