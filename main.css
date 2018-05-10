@@ -1,0 +1,18 @@
+table {
+    border-collapse: collapse;
+}
+
+thead tr th {
+    background-color: lightblue;
+}
+
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+tfoot {
+    border-top: 3px solid black;
+    font-weight: bold;
+}
