@@ -68,7 +68,7 @@ input {
 table {
     border-collapse: collapse;
     border: 1px solid white;
-    background: #21ABA5;
+    background: #090089;
     color: white;
 }
 
@@ -82,7 +82,7 @@ table {
 }
 
 html {
-    background-color:#163A5F;
+    background-color:#0060CA;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -90,6 +90,8 @@ html {
     background: black;
     color: white;
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
+
 }
 
 tr {
@@ -114,4 +116,6 @@ table td {
 /* hover color */
 td:hover {
     background-color: #429FFD;
+    font-weight: bold;
+
   }
