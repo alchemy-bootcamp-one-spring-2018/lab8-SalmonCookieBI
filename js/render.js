@@ -1,3 +1,5 @@
+'use strict';
+
 function render(array, tabId, rowId) {
     let tab = document.getElementById(tabId);
     while(tab.firstChild) {
