@@ -10,6 +10,10 @@ function addTableRow(columnValueArray, parentElement) {
     parentElement.appendChild(newRow);
 }
 
+// Generate random number
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 // Build a location class
 class Store {
     
@@ -20,11 +24,22 @@ class Store {
         this.cookiesPerCustomer = cookiesPerCustomer;
     }
 
-     // build a function in location class that calculates cookies for each hour of the day
+    createValueArray() {
+        var totalCookies = 0;
+        var hourlyValues = [];
+        hourlyValues[0] = this.name;
+        for(var i = 1; i < 15; i++) {
+            var numberOfCookies = getRandomInt(this.minCustomers, this.maxCustomers) * this.cookiesPerCustomer;
+            hourlyValues[i] = numberOfCookies;
+            totalCookies += numberOfCookies;
+        }
+        hourlyValues[16] = totalCookies;
+    }
+    // build a function in location class that calculates cookies for each hour of the day
     // For each hour of the day
-        // find number of customers (a random number between the min and max customers)
-        // multiply number of customer by cookies per sale
-        // also keep track of total cookies per location
+    // find number of customers (a random number between the min and max customers)
+    // multiply number of customer by cookies per sale
+    // also keep track of total cookies per location
 
 }
 
