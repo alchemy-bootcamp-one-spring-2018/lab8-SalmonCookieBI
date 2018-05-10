@@ -75,7 +75,16 @@ function populateFooter(array) {
     
 }
 function addRow() {
-    alert('ok');
+    event.preventDefault();
+    //const formElement = document.querySelector('form');
+    const inputName = document.getElementById('location').value;
+    const inputMin = document.getElementById('min').value;
+    const inputMax = document.getElementById('max').value;
+    const inputAvg = document.getElementById('avg').value;
+
+    const newShop = new BizData(inputName , inputMin, inputMax , inputAvg);
+    console.log(newShop);
+
 }
 
 randomCustomerAmount(shops);
