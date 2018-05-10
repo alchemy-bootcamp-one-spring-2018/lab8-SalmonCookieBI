@@ -11,12 +11,12 @@ const cookieShops = [
         location: 'Pioneer Square',
         minCustomer: 3,
         maxCustomer: 24,
-        acgPerCustomer: 1.2,
+        avgPerCustomer: 1.2,
     },
     {
         location: 'Powells',
         minCustomer: 11,
         maxCustomer: 38,
-        acgPerCustomer: 3.7,
+        avgPerCustomer: 3.7,
     }
 ]
