@@ -64,7 +64,7 @@ PDX Airport      |      23    |     65     |        6.3
 Pioneer Square  |      3     |     24     |        1.2
 Powell's     |      11    |     38     |        3.7
 St. John's |      20    |     38     |        2.3
-Waterfront            |      2     |     16     |        4.6
+Waterfront  |          |      2     |     16     |        4.6
 
 These numbers are simply Pat's estimates for now, but eventually, once there has been some history collected that provides more accurate numbers, we'll want the ability to update these numbers for each location, and to add/remove locations. But we'll not build all of that today. **Make sure to make each location is its own JavaScript object**.
 
