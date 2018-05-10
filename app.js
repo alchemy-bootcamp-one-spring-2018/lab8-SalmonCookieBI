@@ -15,7 +15,30 @@ function randomCustomerAmount(array) {
     }
 }
 
+function populateTable(array) {
+    const shopRow = document.getElementById('shop-row');
+    const shopData = shopRow.content.querySelectorAll('td');
+    
+    for (let i = 0; i < array.length; i++) {
+        shopData[0].textContent = array[i].name;
+
+        for (let j = 0; j < 15; j++) {
+            shopData[j + 1].textContent = array[i].cookies[j];
+        }
+
+        shopData[16].textContent = 'total';
+    
+        const tb = document.querySelector('tbody');
+        const clone = document.importNode(shopRow.content, true);
+        tb.appendChild(clone);
+    }
+}
+
+
+
 randomCustomerAmount(shops);
 console.log('customers', shops[0].customers);
 
 console.log('cookies', shops[0].cookies);
+
+populateTable(shops);

@@ -2,7 +2,8 @@
 'use strict';
 
 class BizData {
-    constructor(min, max, avg) {
+    constructor(name, min, max, avg) {
+        this.name = name;
         this.min = min;
         this.max = max;
         this.avg = avg;
@@ -11,11 +12,11 @@ class BizData {
     }
 }
 
-const pdxAirport = new BizData(23, 65, 6.3);
-const pioneerSquare = new BizData(3, 24, 1.2);
-const powells = new BizData(11, 38, 3.7);
-const stJohns = new BizData(20, 38, 2.3);
-const waterfront = new BizData(2, 16, 4.6);
+const pdxAirport = new BizData('PDX Airport', 23, 65, 6.3);
+const pioneerSquare = new BizData('Pioneer Square', 3, 24, 1.2);
+const powells = new BizData('Powell\'s', 11, 38, 3.7);
+const stJohns = new BizData('St. John\'s', 20, 38, 2.3);
+const waterfront = new BizData('Waterfront', 2, 16, 4.6);
 
 const shops = [
     pdxAirport,
