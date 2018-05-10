@@ -1,7 +1,7 @@
 'use strict';
 // Build Times
 
-let times = ['Location']
+let times = ['Location'];
 for(let i = 6; i < 13; i++) {
     times.push(i + ':00 AM');
 }
@@ -30,7 +30,7 @@ for(let i in cookieArray) {
 
 // Header/Footer stuff
 function header() {
-    render(times, 'head', 'header')
+    render(times, 'head', 'header');
 }
 
 function footer() {
