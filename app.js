@@ -24,6 +24,7 @@ var pdxAirport = new Location('PDX Airport', 23, 65, 6.3);
 
 console.log(pdxAirport.randomCustomerNum(minimum, maximum));
 
+
 // var maximum;
 // function randomMaximumNum(min, max) {
 //     maximum = Math.floor(Math.random() * (max - min) + min);
