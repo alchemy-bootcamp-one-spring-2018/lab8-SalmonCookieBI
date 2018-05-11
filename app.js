@@ -2,7 +2,6 @@
 /**/
 'use strict';
 
-let hours = [];
 
 function getRandomCustomer(min, max){
     min = Math.ceil(min);
@@ -12,13 +11,15 @@ function getRandomCustomer(min, max){
 
 var attachTrElements = document.getElementById('table-body');
 var attachThElements = document.getElementById('table-head');
+var attachTrFootElements = document.getElementById('table-foot');
 
+let hours = [];
 var x = 0;
-function time(){
+function tableHeaderTime(){
     var row = document.createElement('tr');
     attachThElements.appendChild(row);
     var th = document.createElement('th');
-    th.textContent = '';
+    th.textContent = 'LOCATIONS';
     row.appendChild(th);
     for(var i = 6; i < 21; i++){
         if(i <= 12){
@@ -31,12 +32,14 @@ function time(){
         row.appendChild(newThElement);
         x++;
     }
+    //adding a 'location totals' header after time loop finishes
+    x++;
+    var newThElementTotals = document.createElement('th');
+    newThElementTotals.textContent = 'LOCATION TOTALS';
+    row.appendChild(newThElementTotals);
 }
 
-time();
-
-
-function calculate(){
+function tableBodyCalculate(){
     for(var i = 0; i < cookieShops.length; i++){
         //create tr
         var cookieTotals = 0;
@@ -59,9 +62,29 @@ function calculate(){
         row.appendChild(totalElement);
     }
 }
+var hourlyTotals = 'test';
+var allDailyTotals = 'test';
 
-calculate();
+function tableFooterTotals(){
+    var row = document.createElement('tr');
+    attachTrFootElements.appendChild(row);
+    var th = document.createElement('th');
+    th.textContent = 'HOUR TOTALS';
+    row.appendChild(th);
+    for(var i = 0; i <hours.length; i++){
+        var newTdElement = document.createElement('td');
+        newTdElement.textContent = hourlyTotals;
+        row.appendChild(newTdElement);
+    }
+    //adding a daily total cell after hourly totals loop finishes
+    var newThElementTotals = document.createElement('th');
+    newThElementTotals.textContent = allDailyTotals;
+    row.appendChild(newThElementTotals);
+}
 
+tableHeaderTime();
+tableBodyCalculate();
+tableFooterTotals();
 
 
 const rowInfo = document.getElementById('row-0');
