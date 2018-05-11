@@ -26,7 +26,7 @@ var arrayOfLocationObjects = [pdxAirport, pioneerSquare, powells, stjohns, water
     
 //console.log(pdxAirport.randomCustomerNum(minimum, maximum));
     
-var headerArray = ['Location', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+var headerArray = ['Location', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Total'];
 function hoursHeader() {
     const tHead = document.querySelector('#table-head');
     const tr = document.createElement('tr');
@@ -40,33 +40,37 @@ function hoursHeader() {
     
 }
 hoursHeader();
-
 function locationColumn() {
     var parent = document.querySelector('tbody');
     for(var i = 0; i < arrayOfLocationObjects.length; i++) {
+        var totalCookies = 0;
         var child = document.createElement('tr');
         parent.appendChild(child);
-        //tr.id = 'row-' + i;
         child.textContent = arrayOfLocationObjects[i].location;
-        for(var j = 0; j < headerArray.length - 1; j++) {
+        for(var j = 1; j < headerArray.length; j++) {
             var cell = document.createElement('td');
             child.appendChild(cell);
-            cell.textContent = arrayOfLocationObjects[i].randomCustomerNum();
+            var cookieNumbers = arrayOfLocationObjects[i].randomCustomerNum() * Math.floor(arrayOfLocationObjects[i].avg);
+            cell.textContent = cookieNumbers;
+            totalCookies += cookieNumbers;
         }
+        child.appendChild(cell).textContent = totalCookies;
     }
+    console.log('total cookies', totalCookies);
 }
 
 locationColumn();
 // console.log(arrayOfLocationObjects);
+var locationTotalsArray = [];
 
-function tableData() {
-    var parent = document.querySelectorAll('tr');
+// function tableData() {
+//     var parent = document.querySelector('tr');
 
 
 
-}
+// }
 
-tableData();
+//tableData();
 // var maximum;
 // function randomMaximumNum(min, max) {
 //     maximum = Math.floor(Math.random() * (max - min) + min);
