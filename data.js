@@ -1,5 +1,4 @@
-/**/
-/**/
+/* exported cookieShops */
 'use strict';
 
 const cookieShops = [
