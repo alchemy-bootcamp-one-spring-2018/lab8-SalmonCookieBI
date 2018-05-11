@@ -2,3 +2,36 @@ html {
     background-color:#355C7D;
     font-family: 'Ubuntu', sans-serif;
 }
+
+body {
+    width: 750px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Verdana, sans-serif;
+    color: white;}
+
+#container-paragraphs {
+    width: 750px;
+    border: 5px solid #665544;
+    width: 100%;
+}
+
+#p1 {
+    position: absolute;
+    width:300px;
+    /* float: left; */
+    margin: 5px;
+    padding: 5px;
+    background-color: #011F3F;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#p2 {
+    position: absolute;
+    width: 300px;
+    /* float: right; */
+    margin: 5px;
+    padding: 5px;
+    background-color: #F67280;}
+

@@ -1,6 +1,6 @@
 'use strict';
-// Build Times
 
+// Build Times
 let times = ['Location'];
 for(let i = 6; i < 13; i++) {
     if(i===12) {
@@ -13,7 +13,7 @@ for(let i = 6; i < 13; i++) {
 for(let i = 1; i < 9; i++) {
     times.push(i + ':00 PM');
 }
-console.log(times);
+times.push('Totals');
 
 let totals = [];
 
@@ -45,13 +45,11 @@ function footer() {
 header();
 update();
 
-document.getElementById('randomize-btn').addEventListener('click', randomize);
-
 function addUp() {
     // Reset totals
-    totals = [];
+    totals = ['Total'];
     totals.push('Totals');
-    for(let i = 1; i < 16; i++) {
+    for(let i = 1; i <= 16; i++) {
         totals[i] = 0;
         for(let j in cookieArray) {
             totals[i] += cookieArray[j].cookies[i];
@@ -61,6 +59,7 @@ function addUp() {
 
 
 function randomize() {
+    clear();
     for(let i in cookieArray) {
         cookieArray[i].cookieData();
     }
