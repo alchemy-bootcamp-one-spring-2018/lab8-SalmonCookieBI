@@ -1,8 +1,8 @@
 /* globals cookieShops */
 'use strict';
 
-
-function getRandomCustomer(min, max){
+//get inclusive random customer count; source: MDN
+function getRandomIntInclusive(min, max){
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
@@ -21,8 +21,10 @@ function tableHeaderTime(){
     th.textContent = 'LOCATIONS';
     row.appendChild(th);
     for(var i = 6; i < 21; i++){
-        if(i <= 12){
+        if(i < 12){
             hours.push(i + ':00 am');
+        } else if(i === 12) {
+            hours.push(i + ':00 pm');
         } else {
             hours.push((i - 12) + ':00 pm');
         }
@@ -38,21 +40,23 @@ function tableHeaderTime(){
     row.appendChild(newThElementTotals);
 }
 
+console.log('id tag test', parseInt(document.getElementById('row-0 col-0')));
+// var locationTotals = 0;
 function tableBodyCalculate(){
     for(var i = 0; i < cookieShops.length; i++){
         //create tr
         var cookieTotals = 0;
         var row = document.createElement('tr');
         attachTrElements.appendChild(row);
-        row.setAttribute('id', 'row-' + i);
         var StoreName = document.createElement('td');
         StoreName.textContent = cookieShops[i].location;
         row.appendChild(StoreName);
         for(var j = 0; j < hours.length; j++){
-            var cookieSales = Math.floor(getRandomCustomer(cookieShops[i].minCustomer, cookieShops[i].maxCustomer) * cookieShops[i].avgPerCustomer);
+            var cookieSales = Math.floor(getRandomIntInclusive(cookieShops[i].minCustomer, cookieShops[i].maxCustomer) * cookieShops[i].avgPerCustomer);
             cookieTotals += cookieSales;
             var newTdElement = document.createElement('td');
             var totalElement = document.createElement('td');
+            newTdElement.setAttribute('id', 'row-' + i + ' col-' + j);
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
             row.appendChild(newTdElement);
@@ -73,6 +77,7 @@ function tableFooterTotals(){
     for(var i = 0; i < hours.length; i++){
         var newTdElement = document.createElement('td');
         newTdElement.textContent = hourlyTotals;
+        console.log('hourlyTotals', hourlyTotals);
         row.appendChild(newTdElement);
     }
     //adding a daily total cell after hourly totals loop finishes
@@ -81,13 +86,8 @@ function tableFooterTotals(){
     row.appendChild(newThElementTotals);
 }
 
-
-
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
 
 
-const rowInfo = document.getElementById('row-0');
-//console.log(rowInfo);
-//console.log(cookieTotals);
