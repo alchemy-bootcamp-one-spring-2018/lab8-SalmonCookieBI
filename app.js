@@ -6,7 +6,6 @@ class Location {
         this.minimum = minimum;
         this.maximum = maximum;
         this.avg = avg;
-        this.customers = [];
     }
     
     randomCustomerNum() {
@@ -20,8 +19,9 @@ var pioneerSquare = new Location('Pioneer Square', 3, 24, 1.2);
 var powells = new Location('Powell\'s', 11, 38, 3.7);
 var stjohns = new Location('St. John\'s', 20, 38, 2.3);
 var waterfront = new Location('Waterfront', 2, 16, 4.6);
+var home = new Location('home', 17, 30, 2.5);
     
-var arrayOfLocationObjects = [pdxAirport, pioneerSquare, powells, stjohns, waterfront];
+var arrayOfLocationObjects = [pdxAirport, pioneerSquare, powells, stjohns, waterfront, home];
     
     
 //console.log(pdxAirport.randomCustomerNum(minimum, maximum));
@@ -39,7 +39,9 @@ function hoursHeader() {
     }
     
 }
+
 hoursHeader();
+
 function locationColumn() {
     var parent = document.querySelector('tbody');
     for(var i = 0; i < arrayOfLocationObjects.length; i++) {
@@ -56,10 +58,37 @@ function locationColumn() {
         }
         child.appendChild(cell).textContent = totalCookies;
     }
-    console.log('total cookies', totalCookies);
 }
 
 locationColumn();
+
+
+var formData = document.querySelector('#submit');
+formData.addEventListener('submit', submitLocationData);
+
+function submitLocationData(e) {
+    e.preventDefault();
+    var locationInput = document.getElementById('location-input').value;
+    var minimum = parseInt(document.getElementById('minimum').value);
+    var maximum = parseInt(document.getElementById('maximum').value);
+    var averageCookies = parseInt(document.getElementById('average-cookies').value);
+    new Location(locationInput, minimum, maximum, averageCookies);
+    console.log(locationInput);
+    
+}
+
+    
+
+
+
+
+
+
+
+
+
+
+
 // console.log(arrayOfLocationObjects);
 var locationTotalsArray = [];
 
