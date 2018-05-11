@@ -17,7 +17,7 @@
     <h1 id="title">Pat's Salmon Cookies</h1>
     <h2>SALES DATA</h3>
     <div id="form">
-        <form>
+        <form id="add-row-form">
             <fieldset>
                 <legend>
                     Add a new store to the table:
@@ -25,19 +25,19 @@
                 <label>
                     Location Name
                 </label>
-                <input id="location" name="location" value="portland">
+                <input id="location" name="location" value="portland" required>
                 <label>
                     Minimum Customers Per Hour
                 </label>
-                <input id="min" name="min" value="1" type="number">
+                <input id="min" name="min" value="1" type="number" required>
                 <label>
                     Maximum Customers Per Hour
                 </label>
-                <input id="max" name="max" value="10" type="number">
+                <input id="max" name="max" value="10" type="number" required>
                 <label>
                     Average Cookies Per Sale
                 </label>
-                <input id="avg" name="avg" value="2.5" type="number">
+                <input id="avg" name="avg" value="2.5" type="number" required>
                 <input type="submit" id="submit-button" value="Click to Add">
             </fieldset>
         </form>

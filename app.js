@@ -1,6 +1,7 @@
 /* globals shops, BizData */
 'use strict';
 
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -75,23 +76,23 @@ function populateFooter(array) {
     tfoot.appendChild(clone);
     
 }
-function addRow() {
+function addRow(event) {
     event.preventDefault();
     //const formElement = document.querySelector('form');
-    const inputName = document.getElementById('location').value;
-    const inputMin = parseInt(document.getElementById('min').value);
-    const inputMax = parseInt(document.getElementById('max').value);
-    const inputAvg = parseFloat(document.getElementById('avg').value);
+    const inputName = event.target.location.value;
+    const inputMin = parseInt(event.target.min.value);
+    const inputMax = parseInt(event.target.max.value);
+    const inputAvg = parseFloat(event.target.avg.value);
 
     const newShop = new BizData(inputName, inputMin, inputMax, inputAvg);
-    console.log(newShop);
+    // console.log(newShop);
     const newShopArray = [newShop];
     randomCustomerAmount(newShopArray);
     
     populateTable(newShopArray);
 
     const shopFoot = document.querySelector('tfoot');
-    console.log('footer', shopFoot);
+    // console.log('footer', shopFoot);
     const shopData = shopFoot.querySelectorAll('td');
 
     for(let i = 0; i < 14; i++) {
@@ -105,5 +106,5 @@ randomCustomerAmount(shops);
 populateTable(shops);
 populateFooter(shops);
 
-const submit = document.getElementById('submit-button');
-submit.addEventListener('click', addRow, true);
+const submit = document.getElementById('add-row-form');
+submit.addEventListener('submit', addRow);
