@@ -7,9 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<img src="fish.png" id="fish">
-<h1>Salmon Cookie Sales:  Hours by Location</h1>
 <body>
+        <h1>Salmon Cookie Sales:  Hours by Location</h1>
     <table id="main-table">
 
         <thead id="table-head"></thead>
@@ -19,7 +18,34 @@
         <tfoot id="table-foot"></tfoot>
 
     </table>
-    
+    <p></p>
+    <form id="new-location-form">
+        <fieldset>
+            <legend>Enter New Location Data</legend>
+            <div>
+                <label name="newLocation">Location:</label>
+                <input name="newLocation" type="text" required="true">
+            </div>
+            <div>
+                <label name="newMinCustomer">Min Customers:</label>
+                <input name="newMinCustomer" type="text" required="true">
+            </div>
+            <div>
+                <label name="newMaxCustomer">Max Customers:</label>
+                <input name="newMaxCustomer" type="text" required="true">
+            </div>
+            <div>
+                <label name="newAvgCustomer">Cookies Per Customers:</label>
+                <input name="newAvgCustomer" type="text" required="true">
+            </div>
+            <div>          
+                <button type="submit">Add Location to Table</button>
+            </div>
+        </fieldset>
+    </form>
+    <p><a href="front.html">Back to our Homepage!</a>
+    </p>
+    <p></p>
 </body>
 <script src="data.js"></script>
 <script src="app.js"></script>
