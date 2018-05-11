@@ -55,7 +55,6 @@ function tableBodyCalculate(){
             var totalElement = document.createElement('td');
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
-            //console.log(cookieTotals);
             row.appendChild(newTdElement);
         }
         row.appendChild(totalElement);
@@ -91,3 +90,4 @@ tableFooterTotals();
 
 const rowInfo = document.getElementById('row-0');
 //console.log(rowInfo);
+//console.log(cookieTotals);
