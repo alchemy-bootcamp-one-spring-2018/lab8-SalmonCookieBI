@@ -1,5 +1,8 @@
 /* exported stores */
 
+var hourlyTotals = [];
+
+// this function which takes array of data and creates a row and adds it to a parent
 function addTableRow(columnValueArray, parentElement) {
     var newRow = document.createElement('tr');
     for(var i = 0; i < columnValueArray.length; i++) {
@@ -14,7 +17,8 @@ function addTableRow(columnValueArray, parentElement) {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-// Build a location class
+
+// Build a Store class
 class Store {
     
     constructor(name, minCustomers, maxCustomers, cookiesPerCustomer) {
@@ -27,32 +31,39 @@ class Store {
     createValueArray() {
         var totalCookies = 0;
         var hourlyValues = [];
+        // first value is the store name
         hourlyValues[0] = this.name;
-        for(var i = 1; i < 15; i++) {
-            var numberOfCookies = getRandomInt(this.minCustomers, this.maxCustomers) * this.cookiesPerCustomer;
+        // values 1 - 15 are cookie quantities (randomly generated between min and max)
+        for(var i = 1; i < 16; i++) {
+            var numberOfCookies = parseInt(getRandomInt(this.minCustomers, this.maxCustomers) * this.cookiesPerCustomer);
             hourlyValues[i] = numberOfCookies;
-            totalCookies += numberOfCookies;
+            // hourlyTotals has to be initialized to zero
+            if(isNaN(hourlyTotals[i])) {
+                hourlyTotals[i] = 0;
+            }
+            hourlyTotals[i] += numberOfCookies;
+            totalCookies += numberOfCookies; // increment total cookies
         }
+        // last value of array is the total number of cookies
         hourlyValues[16] = totalCookies;
+        return hourlyValues;
     }
-    // build a function in location class that calculates cookies for each hour of the day
-    // For each hour of the day
-    // find number of customers (a random number between the min and max customers)
-    // multiply number of customer by cookies per sale
-    // also keep track of total cookies per location
+
+    writeRow(parentElement) {
+        var columnValueArray = this.createValueArray();
+        addTableRow(columnValueArray, parentElement);
+    }
 
 }
 
-// Create array of locations
+// Create array of Stores
 const stores = [
-    new Store('PDX Airport', 23, 65, 6.3),
+    new Store('PDX Airport', 23, 65, 6.3), 
     new Store('Pioneer Square', 3, 24, 1.2),
     new Store('Powell\'s', 11, 38, 3.7),
     new Store('St. John\'s', 20, 38, 2.3),
     new Store('Waterfront', 2, 16, 4.6)
 ];
 
-
-// Add new row function which takes array of data and creates a row and adds it to a parent.
 
 
