@@ -49,6 +49,16 @@ h1 {
 }
 
 #right {
+    position: relative;
     text-align: left;
     background-color: #F67280;
+}
+
+#copyright {
+    font-size: 80%;
+    position:absolute;
+    margin: 1 em;
+    bottom:0;
+    right:5%;
+    text-align: end;
 }
