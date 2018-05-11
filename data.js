@@ -1,7 +1,7 @@
 /* exported cookieShops */
 'use strict';
 
-//table is gathering the corrent info, need to attach to constructor:
+//table is gathering the correct info, need to attach to constructor:
 function collectNewLocation(event) {
     event.preventDefault();
     
