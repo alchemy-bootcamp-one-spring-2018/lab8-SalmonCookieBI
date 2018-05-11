@@ -42,6 +42,7 @@ for(let i in cookieArray) {
     cookieArray[i].cookieData();
 }
 
+
 // Header/Footer stuff
 function header() {
     render(times, 'head', 'header');
