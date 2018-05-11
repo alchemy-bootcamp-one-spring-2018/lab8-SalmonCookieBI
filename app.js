@@ -55,7 +55,7 @@ function tableBodyCalculate(){
             var totalElement = document.createElement('td');
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
-            console.log(cookieTotals);
+            //console.log(cookieTotals);
             row.appendChild(newTdElement);
         }
         row.appendChild(totalElement);
@@ -82,16 +82,12 @@ function tableFooterTotals(){
     row.appendChild(newThElementTotals);
 }
 
-//function footerTotals() {
-
-//}
-
 
 
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
-//footerTotals();
+
 
 const rowInfo = document.getElementById('row-0');
-console.log(rowInfo);
+//console.log(rowInfo);

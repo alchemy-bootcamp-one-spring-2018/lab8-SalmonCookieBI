@@ -1,5 +1,13 @@
 /* exported cookieShops */
 'use strict';
+const submitLocation = document.getElementById('new-location-form');
+submitLocation.addEventListener("click", submitNewLocation);
+
+function submitNewLocation(e) {
+        console.log('target', e.target.location.value);
+}
+
+
 
 const cookieShops = [
 
