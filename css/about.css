@@ -1,26 +1,32 @@
 html {
     background-color:#355C7D;
     font-family: 'Ubuntu', sans-serif;
+    height: 80%;
 }
 
 body {
     font-family: Arial, Verdana, sans-serif;
     color: white;
-    justify-content: center;
-    width: 750px; 
+    height: 80%; 
 }
 
 #container-about {
-    display: flex;
+    height: 100%;
     flex-direction: row;
     overflow:auto; 
-    /* width: 600px;  */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #left, #right {
     width: 40%; 
     margin:5px; 
-    padding: 1em; 
+    padding: 1em;
+    height: 40%; 
 }
 
 #left {
