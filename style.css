@@ -1,7 +1,8 @@
 /* made with help from http://divtable.com/table-styler/ */
 
 body {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #B1EFF5 */
 }
 
 h1, h2 {
@@ -9,20 +10,20 @@ h1, h2 {
 }
 
 table {
-    width: 100%;
+    width: 90%;
     text-align: center;
+    font-size: 14px;
     border-collapse: collapse;
+    /* background-color: #F5B7B1; */
 }
 
 td {
     border: 1px solid #FFFFFF;
     padding: 3px 4px;
-    font-weight: bold;
-    font-size: 14px;
 }
 
 table td:nth-child(even) {
-    background: #EBEBEB;
+    background: #CDF5B1;
 }
 
 table thead {
@@ -36,3 +37,15 @@ table tfoot {
     font-weight: bold;
     border-top: 4px solid #333333;
 }
+
+/* style the left-most column */
+td:first-of-type {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* I thought this would style the left-most column, but it didn't work
+tr > td {
+    font-size: 16px;
+    font-weight: bold;
+} */
