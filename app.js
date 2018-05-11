@@ -9,11 +9,9 @@ class Location {
         this.customers = [];
     }
     
-    randomCustomerNum(minimum, maximum) {
-        return Math.floor(Math.random() * (maximum - minimum) + minimum);
+    randomCustomerNum() {
+        return Math.floor(Math.random() * (this.maximum - this.minimum) + this.minimum);
     }
-    //randomMinimumNum(min, max) {
-    //     return this.minimum = Math.floor(Math.random() * ();
 }
     
     
@@ -53,7 +51,7 @@ function locationColumn() {
         for(var j = 0; j < headerArray.length - 1; j++) {
             var cell = document.createElement('td');
             child.appendChild(cell);
-            cell.textContent = arrayOfLocationObjects[i].randomCustomerNum(23, 65);
+            cell.textContent = arrayOfLocationObjects[i].randomCustomerNum();
         }
     }
 }
