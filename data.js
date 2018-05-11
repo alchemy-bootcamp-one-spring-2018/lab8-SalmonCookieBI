@@ -1,12 +1,25 @@
 /* exported cookieShops */
 'use strict';
-const submitLocation = document.getElementById('new-location-form');
-submitLocation.addEventListener("click", submitNewLocation);
 
-function submitNewLocation(e) {
-        console.log('target', e.target.location.value);
+//table is gathering the corrent info, need to attach to constructor:
+function collectNewLocation(event) {
+    event.preventDefault();
+    
+    var newLocation = event.target.newLocation.value;
+    console.log('location: ', newLocation);
+    
+    var newMinCustomer = parseInt(event.target.newMinCustomer.value);
+    console.log('new min customer: ', newMinCustomer);
+    
+    var newMaxCustomer = parseInt(event.target.newMaxCustomer.value);
+    console.log('new max customer: ', newMaxCustomer);
+    
+    var newAvgCustomer = parseInt(event.target.newAvgCustomer.value);
+    console.log('new avg cookies per customer: ', newAvgCustomer);
 }
 
+const submitLocation = document.getElementById('new-location-form');
+submitLocation.addEventListener('submit', collectNewLocation);
 
 
 const cookieShops = [
