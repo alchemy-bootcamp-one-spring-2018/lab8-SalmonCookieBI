@@ -1,7 +1,7 @@
 /* exported randomNum timesArray locationsArray calculateRandom*/
 class Salmon {
-    constructor(locations, min, max, avg) {
-        this.locations = locations,
+    constructor(locationName, min, max, avg) {
+        this.locationName = locationName,
         this.min = min,
         this.max = max,
         this.avg = avg,
