@@ -4,31 +4,31 @@ html {
 }
 
 body {
-    width: 750px;
-    margin: 0;
-    padding: 0;
     font-family: Arial, Verdana, sans-serif;
-    color: white;}
+    color: white;
+    justify-content: center;
 
-#container-paragraphs {
-    width: 750px;
-    height: 218px;
-    border: 5px solid #665544;
-    width: 100%;
 }
 
-#span1 {
-    width:50%;
-    height: 100%;
-    float: left;
-    background-color: #011F3F;
+#container-about {
+    display: flex;
+    flex-direction: row;
+    overflow:auto; 
+    width: 600px; 
+}
+
+#left, #right {
+    width: 40%; 
+    margin:5px; 
+    padding: 1em; 
+}
+
+#left {
     text-align: justify;
-    text-justify: inter-word;
+    background-color: #011F3F;
 }
 
-#span2 {
-    width: 50%;
-    height: 100%;
-    float: right;
-    background-color: #F67280;}
-
+#right {
+    
+    background-color: #F67280;
+}
