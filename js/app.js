@@ -3,7 +3,7 @@
 // Build Times
 let times = ['Location'];
 for(let i = 6; i < 13; i++) {
-    if(i===12) {
+    if(i === 12) {
         times.push(i + ':00 PM');   
     }
     else {
