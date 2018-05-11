@@ -6,7 +6,7 @@ function submitLogin(e) {
     console.log('submitLogin -e', e);
     console.log('target', e.target.username.value);
     console.log('target', e.target.password.value);
-
+    
     let username = e.target.username.value;
     let password = e.target.password.value;
 
@@ -18,6 +18,7 @@ function submitLogin(e) {
     let payload = {
         'username': username,
         'password': password
+
     };
     console.log('submitLogin - payload', payload);
 }
