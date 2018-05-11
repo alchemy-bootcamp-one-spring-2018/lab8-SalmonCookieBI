@@ -98,8 +98,8 @@ function addRow(event) {
     for(let i = 0; i < 14; i++) {
         hourlyTotal[i] += newShop.cookies[i];
         shopData[i + 1].textContent = hourlyTotal[i];
-
     }
+    // window.open('index.html');
 }
 
 randomCustomerAmount(shops);
