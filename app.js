@@ -1,4 +1,4 @@
-/* globals shops */
+/* globals shops, BizData */
 'use strict';
 
 function getRandomInt(min, max) {
@@ -9,7 +9,7 @@ function randomCustomerAmount(array) {
     // for each location in our array...
     for(let i = 0; i < array.length; i++) {
         // for each hour in the day...
-        for(let j = 0; j < 15; j++) {
+        for(let j = 0; j < 14; j++) {
             // generate a random number of customers
             array[i].customers[j] = getRandomInt(array[i].min, array[i].max);
             // those customers buy cookies based averages
@@ -26,7 +26,7 @@ function totalCookies(array) {
     return total;
 }
 
-let hourlyTotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let hourlyTotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function hourlyTotalCookies(array) {
     for(let i = 0; i < array.length; i++) {
@@ -44,11 +44,11 @@ function populateTable(array) {
     for(let i = 0; i < array.length; i++) {
         shopData[0].textContent = array[i].name;
 
-        for(let j = 0; j < 15; j++) {
+        for(let j = 0; j < 14; j++) {
             shopData[j + 1].textContent = array[i].cookies[j];
         }
 
-        shopData[16].textContent = totalCookies(array[i].cookies);
+        shopData[15].textContent = totalCookies(array[i].cookies);
     
         const tb = document.querySelector('tbody');
         const clone = document.importNode(shopRow.content, true);
@@ -64,11 +64,11 @@ function populateFooter(array) {
       
     shopData[0].textContent = 'Hourly Totals for All Locations';
 
-    for(let j = 0; j < 15; j++) {
+    for(let j = 0; j < 14; j++) {
         shopData[j + 1].textContent = hourlyCookies[j];
     }
 
-    shopData[16].textContent = totalCookies(hourlyCookies);
+    shopData[15].textContent = totalCookies(hourlyCookies);
 
     const tfoot = document.querySelector('tfoot');
     const clone = document.importNode(shopRow.content, true);
@@ -79,9 +79,9 @@ function addRow() {
     event.preventDefault();
     //const formElement = document.querySelector('form');
     const inputName = document.getElementById('location').value;
-    const inputMin = document.getElementById('min').value;
-    const inputMax = document.getElementById('max').value;
-    const inputAvg = document.getElementById('avg').value;
+    const inputMin = parseInt(document.getElementById('min').value);
+    const inputMax = parseInt(document.getElementById('max').value);
+    const inputAvg = parseFloat(document.getElementById('avg').value);
 
     const newShop = new BizData(inputName, inputMin, inputMax, inputAvg);
     console.log(newShop);
@@ -94,7 +94,7 @@ function addRow() {
     console.log('footer', shopFoot);
     const shopData = shopFoot.querySelectorAll('td');
 
-    for(let i = 0; i < 15; i++) {
+    for(let i = 0; i < 14; i++) {
         hourlyTotal[i] += newShop.cookies[i];
         shopData[i + 1].textContent = hourlyTotal[i];
 
