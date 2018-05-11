@@ -30,11 +30,22 @@
 }
 
 /* STYLING */
+
+h1 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #F67280;
+    background: transparent;
+    margin-top: 110px;
+    z-index: 9;
+    }
+
 body {
     /* background-image: url('../images/bg-water.jpg'); */
     padding: 0;
     margin: 0;
-    background-image: url('../images/background.jpg');
+    /* background-image: url('../images/background.jpg'); */
     /* background-size: cover; */
     animation: water-bounce 5s alternate ease-in-out infinite;
 }
@@ -75,7 +86,7 @@ table {
 #header, #body-total {
     background: #011F3F;
     font-weight: bold;
-    color: #FDB87D;
+    color: #F67280;
 }
 
 #body-data {
@@ -83,7 +94,7 @@ table {
 }
 
 html {
-    background-color:#0060CA;
+    background-color:#355C7D;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -112,6 +123,7 @@ table td {
     height: 100%;
     background: url('../images/salmon.png');
     animation: salmon-swim 30s linear infinite;
+    z-index: 10;
 }
 
 /* hover color */
