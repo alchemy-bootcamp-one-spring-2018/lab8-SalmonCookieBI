@@ -1,5 +1,4 @@
-/**/
-/**/
+/* globals cookieShops */
 'use strict';
 
 
@@ -62,8 +61,9 @@ function tableBodyCalculate(){
         row.appendChild(totalElement);
     }
 }
-var hourlyTotals = 'test';
-var allDailyTotals = 'test';
+
+var hourlyTotals = 'total';
+var allDailyTotals = 'All Location Totals';
 
 function tableFooterTotals(){
     var row = document.createElement('tr');
@@ -71,7 +71,7 @@ function tableFooterTotals(){
     var th = document.createElement('th');
     th.textContent = 'HOUR TOTALS';
     row.appendChild(th);
-    for(var i = 0; i <hours.length; i++){
+    for(var i = 0; i < hours.length; i++){
         var newTdElement = document.createElement('td');
         newTdElement.textContent = hourlyTotals;
         row.appendChild(newTdElement);
@@ -82,10 +82,16 @@ function tableFooterTotals(){
     row.appendChild(newThElementTotals);
 }
 
+//function footerTotals() {
+
+//}
+
+
+
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
-
+//footerTotals();
 
 const rowInfo = document.getElementById('row-0');
 console.log(rowInfo);
