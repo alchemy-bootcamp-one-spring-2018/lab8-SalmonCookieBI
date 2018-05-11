@@ -2,6 +2,20 @@ body {
   margin: 0px;
 }
 
+header {
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 10px 1fr 2fr 3fr 2fr 10px;
+  grid-template-rows: 10px 1fr 10px;
+}
+
+#nav-logo {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: center;
+  max-height: 100px; 
+}
+
 .main-container {
   perspective: 1px;
   transform-style: preserve-3d;
@@ -16,6 +30,39 @@ body {
   background-color: red;
   z-index: 1;
 }
+
+#nav {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  align-self: center;
+}
+
+#nav a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold; 
+  color: #30302E;
+  text-decoration: none;
+  padding: 20px;
+}
+
+#nav a:hover {
+  color: #915766;
+}
+
+#sign-in {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: .8em;
+  justify-self: end;
+}
+
+#sign-in button {
+  margin: 10px;
+}
+
 
 .content {
   max-width: 750px;
@@ -34,7 +81,13 @@ body {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
   ),
-  url(images/bg.jpg);
+   no-repeat center center fixed 
+   url(images/bg.jpg);
+  background-size: cover;  
 
+}
+
+footer {
+  background-color: #915766;
 }
 
