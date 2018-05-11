@@ -85,7 +85,7 @@ function tableFooterTotals(){
     newThElementTotals.textContent = allDailyTotals;
     row.appendChild(newThElementTotals);
 }
-
+//test for git
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
