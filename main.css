@@ -1,5 +1,8 @@
-table {
-    /* border-collapse: collapse; */
+table, td {
+     border-collapse: collapse;
     border: 1px solid darkmagenta;
-    padding: 5px;
+    padding: 2px;
 }
+ thead tr {
+    border: 1px solid darkmagenta;
+ }
