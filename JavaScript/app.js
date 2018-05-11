@@ -4,8 +4,10 @@
 function displayHeader() {
     var thead = document.getElementById('thead');
     var child = document.createElement('tr');
+    var locationTitle = document.createElement('td');
     thead.appendChild(child);
-
+    child.appendChild(locationTitle);
+    locationTitle.textContent = 'Locations';
 
     for(let j = 0; j < timesArray.length; j++){
         var grandChild = document.createElement('td');
@@ -18,14 +20,18 @@ function displayBody() {
     var tbody = document.getElementById('tbody');
     for(let i = 0; i < locationsArray.length; i++){
         var child = document.createElement('tr');
+        var local = document.createElement('td');
         tbody.appendChild(child);
-        
+        child.appendChild(local);
+        local.textContent = locationsArray[i].locationName;
+
         for(let j = 0; j < timesArray.length; j++){
             var grandChild = document.createElement('td');
             child.appendChild(grandChild);
             
             grandChild.textContent = locationsArray[i].customer[j];
         }
+
     }
 }
 
