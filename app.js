@@ -33,7 +33,7 @@ function hoursHeader() {
     const tHead = document.querySelector('#table-head');
     const tr = document.createElement('tr');
     tHead.appendChild(tr);
-    for(let i = 0; i < 16; i++) {
+    for(let i = 0; i < headerArray.length; i++) {
         const th = document.createElement('th');
         tr.appendChild(th);
         console.log(headerArray[i]);
@@ -45,7 +45,7 @@ hoursHeader();
 
 function locationColumn() {
     var parent = document.querySelector('tbody');
-    for(var i = 0; i < 5; i++) {
+    for(var i = 0; i < arrayOfLocationObjects.length; i++) {
         var child = document.createElement('tr');
         parent.appendChild(child);
         //tr.id = 'row-' + i;
@@ -53,7 +53,7 @@ function locationColumn() {
         for(var j = 0; j < headerArray.length - 1; j++) {
             var cell = document.createElement('td');
             child.appendChild(cell);
-            cell.textContent = arrayOfLocationObjects[j].randomCustomerNum(23, 65);
+            cell.textContent = arrayOfLocationObjects[i].randomCustomerNum(23, 65);
         }
     }
 }
