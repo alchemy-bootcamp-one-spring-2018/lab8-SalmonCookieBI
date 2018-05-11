@@ -16,6 +16,27 @@ function displayHeader() {
         grandChild.textContent = timesArray[j];
     }
 }
+
+function displayFooter() {
+    var tfoot = document.getElementById('tfoot');
+    var parent = document.createElement('tr');
+    var label = document.createElement('td');
+    tfoot.appendChild(parent);
+    parent.appendChild(label);
+    label.textContent = 'Total:';
+
+    for(let i = 0; i < timesArray.length; i++) {
+        
+        var child = document.createElement('td');
+        // var totals = document.createElement('td');
+        // child.appendChild(totals);
+        parent.appendChild(child);
+        
+        child.textContent = '0';
+    }
+}
+
+
 function displayBody() {
     var tbody = document.getElementById('tbody');
     for(let i = 0; i < locationsArray.length; i++){
@@ -47,6 +68,8 @@ function customerAvg() {
         }
     }
 }
+
 displayHeader();
 customerAvg();
 displayBody();
+displayFooter();
