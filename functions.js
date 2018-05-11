@@ -1,8 +1,11 @@
 /* exported stores */
 
+// This array will keep track of the totals per hour for all stores
 var hourlyTotals = [];
+hourlyTotals[0] = 'Total per hour';
+var grandTotal = 0;
 
-// this function which takes array of data and creates a row and adds it to a parent
+// this function takes an array of data, puts each item into a cell, and adds the completed row to the specified parent
 function addTableRow(columnValueArray, parentElement) {
     var newRow = document.createElement('tr');
     for(var i = 0; i < columnValueArray.length; i++) {
@@ -13,12 +16,11 @@ function addTableRow(columnValueArray, parentElement) {
     parentElement.appendChild(newRow);
 }
 
-// Generate random number
+// Generate random number between min and max
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// Build a Store class
 class Store {
     
     constructor(name, minCustomers, maxCustomers, cookiesPerCustomer) {
@@ -28,6 +30,7 @@ class Store {
         this.cookiesPerCustomer = cookiesPerCustomer;
     }
 
+    // this function creates an array that represents a row (one Store) of the table.  In addition, it increments the global hourly totals variable.
     createValueArray() {
         var totalCookies = 0;
         var hourlyValues = [];
@@ -37,15 +40,17 @@ class Store {
         for(var i = 1; i < 16; i++) {
             var numberOfCookies = parseInt(getRandomInt(this.minCustomers, this.maxCustomers) * this.cookiesPerCustomer);
             hourlyValues[i] = numberOfCookies;
-            // hourlyTotals has to be initialized to zero
+            // each element of hourlyTotals has to be initialized to zero
             if(isNaN(hourlyTotals[i])) {
                 hourlyTotals[i] = 0;
             }
             hourlyTotals[i] += numberOfCookies;
-            totalCookies += numberOfCookies; // increment total cookies
+            totalCookies += numberOfCookies;
         }
-        // last value of array is the total number of cookies
+        grandTotal += totalCookies;
+        // last value of array is the total number in the array/row
         hourlyValues[16] = totalCookies;
+        hourlyTotals[16] = grandTotal;
         return hourlyValues;
     }
 
