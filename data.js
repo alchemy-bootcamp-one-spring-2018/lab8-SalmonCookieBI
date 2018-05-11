@@ -22,4 +22,4 @@ const cookieShops = [
         maxCustomer: 38,
         avgPerCustomer: 3.7,
     }
-]
+];
