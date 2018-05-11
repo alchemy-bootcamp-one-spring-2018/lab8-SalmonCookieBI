@@ -3,14 +3,30 @@
     0% {
         /* transform: rotate(0deg); */
         background-position-x: 0;
-    } 50% {
+    } 60% {
         /* transform: rotate(15deg); */
-        background-position-y: -13%;
+        background-position-y: -30%;
         background-position-x: 250px;
     } 100% {
         /* transform: rotate(0deg); */
         background-position-x: 500px;
     }
+
+}
+
+@keyframes coffee-slide {
+    0% {
+        /* transform: rotate(0deg); */
+        background-position-x: 500;
+    } 60% {
+        /* transform: rotate(15deg); */
+        background-position-y: 50%;
+        background-position-x: 250px;
+    } 100% {
+        /* transform: rotate(0deg); */
+        background-position-x: 100px;
+    }
+
 }
 
 @keyframes water-bounce {
@@ -120,11 +136,22 @@ table td {
     position: absolute;
     /* display: block; */
     width: 100%;
-    height: 100%;
+    height: 50%;
     background: url('../images/salmon.png');
     animation: salmon-swim 30s linear infinite;
     z-index: 10;
 }
+
+#coffee {
+    position: absolute;
+    /* display: block; */
+    width: 100%;
+    height: 50%;
+    background: url('../images/Cup-o-coffee-simple.png');
+    animation: coffee-slide 30s linear infinite;
+    z-index: 10;
+}
+
 
 /* hover color */
 td:hover {
