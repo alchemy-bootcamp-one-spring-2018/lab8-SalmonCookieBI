@@ -11,10 +11,7 @@ function addRow() {
 }
 
 function addNew(e) {
-    console.log(e);
-    
     e.preventDefault();
-    console.log(e);
     let location = e.target.location.value;
     let min = e.target.min.value;
     let max = e.target.max.value;
@@ -22,7 +19,8 @@ function addNew(e) {
     let temp = new Cookie(location, min, max, avg);
     temp.cookieData();
     cookieArray.push(temp);
+    localStorage.setItem('cookieArray', JSON.stringify(cookieArray));
+    // console.log('cookieArray', cookieArray);
     clear();
     update();
-    console.log('adding new', location, min, max, avg);
 }
