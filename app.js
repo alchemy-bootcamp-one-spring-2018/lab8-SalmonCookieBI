@@ -1,5 +1,4 @@
-/**/
-/**/
+/* globals cookieShops */
 'use strict';
 
 
