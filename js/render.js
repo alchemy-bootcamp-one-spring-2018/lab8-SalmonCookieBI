@@ -11,3 +11,11 @@ function render(array, tabId, rowId) {
     }
     tab.appendChild(row);
 }
+
+// Clear data in the table body
+function clear() {
+    let tab = document.getElementById('body');
+    while(tab.rows.length > 0) {
+        tab.deleteRow(0);
+    }
+}

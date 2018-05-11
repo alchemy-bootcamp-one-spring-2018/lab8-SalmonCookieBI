@@ -29,20 +29,32 @@
     }
 }
 
+@keyframes title-glow {
+    from {
+        text-shadow: 0 0 0 white;
+    } to {
+        text-shadow: 0 -33px 69px white;
+    }
+}
+
 /* STYLING */
 body {
-    /* background-image: url('../images/bg-water.jpg'); */
     padding: 0;
     margin: 0;
     background-image: url('../images/background.jpg');
-    /* background-size: cover; */
     animation: water-bounce 5s alternate ease-in-out infinite;
 }
 
 #container-main {
     display: grid;
+    text-align: center;
     justify-content: center;
-    margin: 10% auto;
+    margin: 33px auto;
+}
+
+h1 {
+    color: white;
+    animation: title-glow 3s alternate infinite;
 }
 
 #container-new {
@@ -63,9 +75,12 @@ input {
 #randomize-btn {
     background: blue;
     color: white;
+    animation: body-water 6s alternate infinite;
+    cursor: help;
 }
 
 table {
+    text-align: left;
     border-collapse: collapse;
     border: 1px solid white;
     background: rgba(0, 0, 0, 0);
