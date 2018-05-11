@@ -1,5 +1,5 @@
 html {
-    background-color:#355C7D;
+    background-color: steelblue;
     font-family: 'Ubuntu', sans-serif;
     height: 80%;
 }
@@ -8,6 +8,13 @@ body {
     font-family: Arial, Verdana, sans-serif;
     color: white;
     height: 80%; 
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2em;
 }
 
 #container-about {
@@ -26,7 +33,7 @@ body {
     width: 40%; 
     margin:5px; 
     padding: 1em;
-    height: 40%; 
+    height: 50%; 
 }
 
 #left {
