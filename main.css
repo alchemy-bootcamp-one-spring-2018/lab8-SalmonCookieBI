@@ -1,7 +1,15 @@
+/* https://stackoverflow.com/questions/9402856/how-to-put-table-in-the-center-of-the-page-using-css */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables */
 table {
     border-collapse: collapse;
 }
