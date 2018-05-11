@@ -6,7 +6,7 @@ signIn.addEventListener('submit', checkUserPassword);
 const loginKey = {
     username: 'admin',
     password: 'password'
-}
+};
 
 function checkUserPassword(event) {
     event.preventDefault();
@@ -17,9 +17,9 @@ function checkUserPassword(event) {
     let payload = {
         username: username,
         password: password
-    }
+    };
 
-    if (payload.username === loginKey.username && payload.password === loginKey.password) {
+    if(payload.username === loginKey.username && payload.password === loginKey.password) {
         window.open('sales.html');
     }
     else {
