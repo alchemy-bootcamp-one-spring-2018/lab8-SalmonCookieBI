@@ -59,7 +59,6 @@ function tableBodyCalculate(){
             newTdElement.setAttribute('id', 'row-' + i + ' col-' + j);
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
-            console.log(cookieTotals);
             row.appendChild(newTdElement);
         }
         row.appendChild(totalElement);
@@ -87,9 +86,8 @@ function tableFooterTotals(){
     row.appendChild(newThElementTotals);
 }
 
-
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
-//footerTotals();
+
 
