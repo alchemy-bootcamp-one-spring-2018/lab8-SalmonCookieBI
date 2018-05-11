@@ -12,17 +12,18 @@ class Cookie {
     cookieData() {
         this.people = [];
         for(let i = 0; i < 15; i++) {
-            let tempAvg = Math.random() * (parseInt(this.max) - parseInt(this.min)) + parseInt(this.min);
+            let tempAvg = parseInt(Math.random() * (parseInt(this.max) - parseInt(this.min)) + parseInt(this.min));
             this.people.push(tempAvg);
         }
         this.cookies = [this.location];
         for(let i = 0; i < this.people.length; i++) {
             this.cookies.push(parseInt(this.people[i] * this.avg));
         }
+        this.cookies.push(parseInt(this.people.reduce((a, b) => a + b) * this.avg));
     }
 
     renderMe() {
-        render(this.people, 'body', 'body-data');
+        render(this.cookies, 'body', 'body-data');
     }
 
 }
