@@ -3,8 +3,26 @@
 const signIn = document.getElementById('sign-in');
 signIn.addEventListener('submit', checkUserPassword);
 
-function checkUserPassword(event) {
-    event.preventDevault();
+const loginKey = {
+    username: 'admin',
+    password: 'password'
+}
 
-    console.log(event);
+function checkUserPassword(event) {
+    event.preventDefault();
+
+    let username = event.target.username.value;
+    let password = event.target.password.value;
+    
+    let payload = {
+        username: username,
+        password: password
+    }
+
+    if (payload.username === loginKey.username && payload.password === loginKey.password) {
+        window.open('sales.html');
+    }
+    else {
+        console.log('login error');
+    }
 }
