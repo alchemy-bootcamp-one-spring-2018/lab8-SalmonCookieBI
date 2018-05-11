@@ -90,19 +90,15 @@ function addRow() {
     
     populateTable(newShopArray);
 
-    //Grab tfoot's td[1].value
     const shopFoot = document.querySelector('tfoot');
     console.log('footer', shopFoot);
     const shopData = shopFoot.querySelectorAll('td');
-
 
     for(let i = 0; i < 15; i++) {
         hourlyTotal[i] += newShop.cookies[i];
         shopData[i + 1].textContent = hourlyTotal[i];
 
     }
-    //Add cookies to tfoot's value
-    //textcontent to new total
 }
 
 randomCustomerAmount(shops);

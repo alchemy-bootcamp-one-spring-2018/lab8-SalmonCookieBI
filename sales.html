@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sales</title>
     <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
     <h1>Pat's Salmon Cookies: Sales Data</h1>
@@ -22,18 +24,21 @@
                 <label>
                     Minimum Customers Per Hour
                 </label>
-                <input id="min" name="min" value="1">
+                <input id="min" name="min" value="1" type="number">
                 <label>
                     Maximum Customers Per Hour
                 </label>
-                <input id="max" name="max" value="10">
+                <input id="max" name="max" value="10" type="number">
                 <label>
                     Average Cookies Per Sale
                 </label>
-                <input id="avg" name="avg" value="2.5">
+                <input id="avg" name="avg" value="2.5" type="number">
                 <input type="submit" id="submit-button" value="Click to Add">
             </fieldset>
         </form>
+    </div>
+    <div class="spacer">
+
     </div>
     <div>
         <table id="sales-table">
@@ -68,23 +73,23 @@
 
         <template id="shop-row">
             <tr>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
+                <td class="darker"></td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="store-total"></td>
             </tr>
         </template>
     </div>
