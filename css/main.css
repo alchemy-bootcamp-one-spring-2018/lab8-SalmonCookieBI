@@ -38,12 +38,12 @@
 }
 
 @keyframes slideIn {
-    from {
-      background-position-x: 500px;
+    0% {
+      background-position-x: 0px;
     }
   
-    to {
-      background-position-x: 0%;
+    100% {
+      background-position-x: -500px;
     }
 }
 
@@ -174,12 +174,11 @@ table td {
 /* SALMON SHIZZ */
 #salmon {
     position: absolute;
-    /* display: block; */
     width: 100%;
     height: 100%;
     margin: 0;
     background: url('../images/salmon.png');
-    animation: salmon-swim 30s linear infinite;
+    animation: salmon-swim 10s linear infinite;
     z-index: -1;
 }
 
@@ -190,23 +189,12 @@ table td {
     height: 100%;
     margin: 0;
     background: url('../images/Cup-o-coffee-simple.png');
-    animation: slideIn 15s linear infinite;
+    animation: slideIn 20s linear infinite;
     z-index: -1;
-    background-repeat: repeat;
-}
-
-@keyframes slideIn {
-    from {
-      background-position-x: 100%;
-    }
-  
-    to {
-      background-position-x: 0%;
-    }
 }
 
 /* hover color */
-td:hover {
+#table-data td:hover {
     background-color: #429FFD;
     font-weight: bold;
 

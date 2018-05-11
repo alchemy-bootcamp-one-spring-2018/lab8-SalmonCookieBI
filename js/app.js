@@ -4,7 +4,7 @@
 let times = ['Location'];
 for(let i = 6; i < 13; i++) {
     if(i === 12) {
-        times.push(i + ':00 PM');   
+        times.push(i + ':00 PM');
     }
     else {
         times.push(i + ':00 AM');
@@ -24,13 +24,23 @@ let center = new Cookie('Seattle Center', 11, 38, 3.7);
 let capitol = new Cookie('Capitol Hill', 20, 38, 2.3);
 let alki = new Cookie('Alki', 2, 16, 4.6);
 
-let cookieArray = [pike, seatac, center, capitol, alki];
+let cookieArray = [];
+
+if(!localStorage.cookieArray) {
+    console.log('we have cookies');
+    let temp = JSON.parse(localStorage.getItem('cookieArray'));
+    console.log(cookieArray);
+} else {
+    console.log('we dont have cookies');
+    cookieArray = [pike, seatac, center, capitol, alki];
+    localStorage.setItem('cookieArray', JSON.stringify(cookieArray));
+}
 
 // Get some random digits
 for(let i in cookieArray) {
+    console.log(cookieArray);
     cookieArray[i].cookieData();
 }
-
 
 // Header/Footer stuff
 function header() {
