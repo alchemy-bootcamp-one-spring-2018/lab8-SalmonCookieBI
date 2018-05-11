@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+}
+
+.main-container {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.content-container {
+  position: relative;
+  display: block;
+  background-color: red;
+  z-index: 1;
+}
+
+.content {
+  max-width: 750px;
+}
+
+.parallax-container {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  url(images/bg.jpg);
+
+}
+
