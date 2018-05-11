@@ -1,4 +1,5 @@
 /* globals stores addTableRow hourlyTotals */
+'use strict';
 
 var parentElement;
 

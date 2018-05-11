@@ -1,11 +1,12 @@
 /* exported stores */
+'use strict';
 
 // This array will keep track of the totals per hour for all stores
 var hourlyTotals = [];
 hourlyTotals[0] = 'Total per hour';
 var grandTotal = 0;
 
-// this function takes an array of data, puts each item into a cell, and adds the completed row to the specified parent
+// this function takes an array of data, puts each item into a td, and adds the completed row to the specified parent
 function addTableRow(columnValueArray, parentElement) {
     var newRow = document.createElement('tr');
     for(var i = 0; i < columnValueArray.length; i++) {
