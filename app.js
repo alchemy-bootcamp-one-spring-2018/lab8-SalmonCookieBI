@@ -38,13 +38,16 @@ function tableHeaderTime(){
     row.appendChild(newThElementTotals);
 }
 
+console.log('id tag test', parseInt(document.getElementById('row-0 col-0')));
+// var locationTotals = 0;
 function tableBodyCalculate(){
     for(var i = 0; i < cookieShops.length; i++){
         //create tr
         var cookieTotals = 0;
+        // var dailyTotals = 0;
         var row = document.createElement('tr');
         attachTrElements.appendChild(row);
-        row.setAttribute('id', 'row-' + i);
+        // row.setAttribute('id', 'row-' + i);
         var StoreName = document.createElement('td');
         StoreName.textContent = cookieShops[i].location;
         row.appendChild(StoreName);
@@ -53,13 +56,22 @@ function tableBodyCalculate(){
             cookieTotals += cookieSales;
             var newTdElement = document.createElement('td');
             var totalElement = document.createElement('td');
+            newTdElement.setAttribute('id', 'row-' + i + ' col-' + j);
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
             console.log(cookieTotals);
             row.appendChild(newTdElement);
         }
+        // dailyTotals += cookieSales;
         row.appendChild(totalElement);
     }
+    // var dailyCookieTotals = [];
+    // // console.log('daily cookie totals', dailyCookieTotals);
+    // for(var k = 0; k < hours.length; k++) {
+    //     locationTotals += dailyTotals;
+    //     dailyCookieTotals.push(locationTotals);
+    //     // console.log('location totals', locationTotals);
+    // }
 }
 
 var hourlyTotals = 'total';
@@ -74,6 +86,7 @@ function tableFooterTotals(){
     for(var i = 0; i < hours.length; i++){
         var newTdElement = document.createElement('td');
         newTdElement.textContent = hourlyTotals;
+        console.log('hourlyTotals', hourlyTotals);
         row.appendChild(newTdElement);
     }
     //adding a daily total cell after hourly totals loop finishes
@@ -82,16 +95,9 @@ function tableFooterTotals(){
     row.appendChild(newThElementTotals);
 }
 
-//function footerTotals() {
-
-//}
-
-
 
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
 //footerTotals();
 
-const rowInfo = document.getElementById('row-0');
-console.log(rowInfo);
