@@ -161,3 +161,30 @@ td:hover {
     font-weight: bold;
 
   }
+
+/* Social Media Icon Styling */
+
+/* Style all font for icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Colors */
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
