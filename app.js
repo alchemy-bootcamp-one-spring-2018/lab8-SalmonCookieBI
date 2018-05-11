@@ -1,4 +1,5 @@
 /* globals  calculateRandom locationsArray timesArray */
+'use strict';
 
 function displayHeader() {
     var thead = document.getElementById('thead');
@@ -26,7 +27,6 @@ function displayBody() {
             grandChild.textContent = locationsArray[i].customer[j];
         }
     }
-
 }
 
 function customerAvg() {
