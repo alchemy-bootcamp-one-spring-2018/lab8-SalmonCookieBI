@@ -1,0 +1,27 @@
+body{
+
+    background-color: rgba(202, 188, 188, 0.767);
+}
+thead{
+    background-color: rgba(173, 230, 185, 0.76);
+}
+tbody{
+    text-align: center;
+    background-color: rgba(176, 196, 222, 0.822)
+    
+}
+td{
+    border-style: solid;
+    border-width: 1px;
+}
+table{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+img{
+    width: 100%;
+}
+table{
+    width: 100%;
+}
