@@ -1,14 +1,14 @@
 /* ANIMATIONS brah*/
 @keyframes salmon-swim {
     0% {
-        /* transform: rotate(0deg); */
+        /* transform: rotate(-15deg); */
         background-position-x: 0;
     } 60% {
-        /* transform: rotate(15deg); */
+        /* transform: rotate(0deg); */
         background-position-y: -30%;
         background-position-x: 250px;
     } 100% {
-        /* transform: rotate(0deg); */
+        /* transform: rotate(-15deg); */
         background-position-x: 500px;
     }
 }
@@ -74,10 +74,10 @@ body {
     display: grid;
     text-align: center;
     justify-content: center;
-    margin: 33px auto;
+    margin: auto;
 }
 
-a {
+#btn-link {
     display: inline;
     text-decoration: none;
     border: 1px solid white;
@@ -85,26 +85,31 @@ a {
     color: white;
     border-radius: 3px;
     padding: 3px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-a:hover {
+#btn-link:hover {
     background: steelblue;
 }
 
-#container-new {
-    font-size: 2rem;
-    background: black;
-    color: white;
-    border: 1px solid white;
-    padding: 13px;
-    margin: auto;
-    align-items: stretch;
+input {
+    font-size: 1.5em;
 }
 
-input {
-    font-size: 2rem;
-    margin: 0 2px;
+#updates {
+    display: flex;
+    padding: 13px;
+    justify-content: space-between;
+    border: 1px solid white;
+    background: rgb(117, 51, 57);
+    color: white;
+    font-weight: bold;
+}
+
+#txt {
+    font-size: 1.5rem;
+    width: 169px;
+    margin: 0 13px 0 0;
 }
 
 #upates {
@@ -112,14 +117,14 @@ input {
     margin: auto;
 }
 
-#randomize-btn {
+#randomize-btn, #submit {
     background: #011F3F;
     color: white;
     margin: auto;
     cursor: help;
 }
 
-#randomize-btn:hover {
+#randomize-btn:hover, #submit:hover {
     background: steelblue;
     animation: none;
 }
@@ -128,7 +133,7 @@ table {
     text-align: left;
     border-collapse: collapse;
     border: 1px solid white;
-    margin: 13px 0 13px 0;
+    margin: 13px 0 0 0;
     color: white;
 }
 
@@ -172,9 +177,10 @@ table td {
     /* display: block; */
     width: 100%;
     height: 100%;
+    margin: 0;
     background: url('../images/salmon.png');
     animation: salmon-swim 30s linear infinite;
-    z-index: 1;
+    z-index: -1;
 }
 
 /* COFFEE SHIZZ */
@@ -182,8 +188,9 @@ table td {
     position: absolute;
     width: 100%;
     height: 100%;
+    margin: 0;
     background: url('../images/Cup-o-coffee-simple.png');
     animation: slideIn 15s linear infinite;
-    z-index: 0;
+    z-index: -1;
     background-repeat: repeat;
 }

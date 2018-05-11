@@ -13,9 +13,9 @@ class Cookie {
         if(localStorage['cookies.' + this.location]){
             // Retrieve the object from storage
             var cookies = localStorage.getItem('cookies.' + this.location);
-            console.log('cookies', cookies);
+            // console.log('cookies', cookies);
             this.cookies = JSON.parse(cookies);
-            console.log('this.cookies', this.cookies);
+            // console.log('this.cookies', this.cookies);
         } else {
             this.people = [];
             for(let i = 0; i < 15; i++) {
@@ -27,7 +27,7 @@ class Cookie {
                 this.cookies.push(parseInt(this.people[i] * this.avg));
             }
             this.cookies.push(parseInt(this.people.reduce((a, b) => a + b) * this.avg));
-            console.log('new cookies', this.cookies);
+            // console.log('new cookies', this.cookies);
             // Put the object into storage
             localStorage.setItem('cookies.' + this.location, JSON.stringify(this.cookies));
         }
