@@ -1,8 +1,15 @@
+html { 
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 body {
     display: grid;
     grid-template-columns: 10px 1fr 20px 4fr 1fr;
     grid-template-rows: 300px 40px 1fr;
-    background: #C9E8E0;
     color: #6E6E70;
     font-family: Ubuntu;
     margin: 0px;
@@ -108,9 +115,6 @@ tfoot>tr>td.darker {
     background: lightgray;
 }
 
-/* responsive breakpoints */
-@media (min-width: 1200px) {
-    body {
-       
-    }
-}
+
+
+
