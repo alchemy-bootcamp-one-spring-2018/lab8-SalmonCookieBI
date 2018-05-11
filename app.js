@@ -1,40 +1,46 @@
-/* globals randomNum calculateRandom locationsArray timesArray */
+/* globals  calculateRandom locationsArray timesArray */
 
 function displayHeader() {
     var thead = document.getElementById('thead');
+    var child = document.createElement('tr');
+    thead.appendChild(child);
 
-    for(let i = 0; i < timesArray.length; i++){
+
+    for(let j = 0; j < timesArray.length; j++){
+        var grandChild = document.createElement('td');
+        child.appendChild(grandChild);
+
+        grandChild.textContent = timesArray[j];
+    }
+}
+function displayBody() {
+    var tbody = document.getElementById('tbody');
+    for(let i = 0; i < locationsArray.length; i++){
         var child = document.createElement('tr');
-        thead.appendChild(child);
-
+        tbody.appendChild(child);
+        
         for(let j = 0; j < timesArray.length; j++){
             var grandChild = document.createElement('td');
             child.appendChild(grandChild);
-            grandChild.id = 'row' + j;
-            displayTimes(j);
             
+            grandChild.textContent = locationsArray[i].customer[j];
         }
-        return child;
     }
 
 }
-function displayTimes(j) {
-    var parent = document.getElementById('row' + j);
-    parent.textContent = timesArray[j];
-
-}
-displayHeader();
 
 function customerAvg() {
-    let newArray = [];
-    for(let i = 0; i < 12; i++) {
-        var min = locationsArray[i].min;
-        var max = locationsArray[i].max;
-
-        let randomNum;
-        calculateRandom(min, max);
-        newArray.push(randomNum);
-
-        // return newArray =
+    for(let h = 0; h < locationsArray.length; h++){
+        
+        for(let i = 0; i < timesArray.length; i++) {
+            var min = locationsArray[h].min;
+            var max = locationsArray[h].max;
+            
+            var randomNum = calculateRandom(min, max);
+            locationsArray[h].customer.push(randomNum);
+        }
     }
 }
+displayHeader();
+customerAvg();
+displayBody();
