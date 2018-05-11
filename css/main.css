@@ -194,3 +194,20 @@ table td {
     z-index: -1;
     background-repeat: repeat;
 }
+
+@keyframes slideIn {
+    from {
+      background-position-x: 100%;
+    }
+  
+    to {
+      background-position-x: 0%;
+    }
+}
+
+/* hover color */
+td:hover {
+    background-color: #429FFD;
+    font-weight: bold;
+
+  }
