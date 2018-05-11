@@ -75,6 +75,7 @@ table {
 #header, #body-total {
     background: #011F3F;
     font-weight: bold;
+    color: #FDB87D;
 }
 
 #body-data {
