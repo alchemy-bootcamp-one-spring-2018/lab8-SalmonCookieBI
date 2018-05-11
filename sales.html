@@ -5,8 +5,31 @@
     <title>Sales</title>
 </head>
 <body>
-    <section>
-        <h1>Pat's Salmon Cookie: Sales Data</h1>
+    <h1>Pat's Salmon Cookies: Sales Data</h1>
+    <section id="form">
+        <fieldset>
+            <legend>Enter New Store</legend>
+            <label>
+                Store Location:<br>
+                <input type="text" name="store" id="store-location"><br>
+            </label>
+            <label>
+                Minimum customers per hour:<br>
+                <input type="text" name="min" id="min-customers"><br>
+            </label>
+            <label>
+                Maximum customers per hour:<br>
+                <input type="text" name="max" id="max-customers"><br>
+            </label>
+            <label>
+                Average number of cookies sold per customer:<br>
+                <input type="text" name ="avg" id="avg-cookie"><br>
+            </label>
+            <button id="submit-data" onclick="addNewStore()">Add New Data</button>
+        </fieldset>
+    </section>
+    
+    <section id="table">
         <table>
             <thead>
                 <tr>
@@ -30,7 +53,7 @@
             </thead>
             <tbody id="table-body">
             </tbody>
-            <tfoot>
+            <tfoot id="footer">
                 <tr id="table-foot">
                     <td>Hourly Totals for All Locations</td>
                 </tr>
