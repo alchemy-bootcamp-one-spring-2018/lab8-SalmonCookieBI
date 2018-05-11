@@ -26,15 +26,18 @@ function displayTimes(j) {
 displayHeader();
 
 function customerAvg() {
-    let newArray = [];
-    for(let i = 0; i < 12; i++) {
-        var min = locationsArray[i].min;
-        var max = locationsArray[i].max;
+    for(let h = 0; h < locationsArray.length; h++){
+        let newArray = [];
 
-        let randomNum;
-        calculateRandom(min, max);
-        newArray.push(randomNum);
-
-        // return newArray =
+        for(let i = 0; i < timesArray.length; i++) {
+            var min = locationsArray[h].min;
+            var max = locationsArray[h].max;
+            
+            var randomNum = calculateRandom(min, max);
+            newArray.push(randomNum);
+        }
+        // printNewRow();
+        console.log(newArray);
     }
 }
+customerAvg();

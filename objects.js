@@ -1,4 +1,4 @@
-/* exported randomNum timesArray locationsArray */
+/* exported randomNum timesArray locationsArray calculateRandom*/
 class Salmon {
     constructor(locations, min, max, avg) {
         this.locations = locations,
@@ -7,7 +7,7 @@ class Salmon {
         this.avg = avg;
     }
 }
-let timesArray = ['Locations', '5a.m.', '6a.m.', '7a.m.', '8a.m.', '9a.m.', '10a.m.', '11a.m', '12p.m.', '1p.m.', '2p.m.', '3p.m'];
+let timesArray = ['5a.m.', '6a.m.', '7a.m.', '8a.m.', '9a.m.', '10a.m.', '11a.m', '12p.m.', '1p.m.', '2p.m.', '3p.m'];
 
 let airport = new Salmon('Airport', 20, 100, 60);
 let pioneerSquare = new Salmon('Pioneer Square', 4, 80, 42);
@@ -20,8 +20,6 @@ let locationsArray = [airport, pioneerSquare, powells, stJohns, division];
 function calculateRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-    return randomNum;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  
 }
-
-calculateRandom();
