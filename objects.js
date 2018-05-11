@@ -4,7 +4,8 @@ class Salmon {
         this.locations = locations,
         this.min = min,
         this.max = max,
-        this.avg = avg;
+        this.avg = avg,
+        this.customer = [];
     }
 }
 let timesArray = ['5a.m.', '6a.m.', '7a.m.', '8a.m.', '9a.m.', '10a.m.', '11a.m', '12p.m.', '1p.m.', '2p.m.', '3p.m'];
