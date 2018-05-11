@@ -7,14 +7,21 @@ html {
 body {
     font-family: Arial, Verdana, sans-serif;
     color: white;
-    height: 80%; 
+    height: 120%; 
+    background-image: url("/images/about background - covfefe.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 h1 {
+    position: absolute;
+    text-align: center;
     font-family: 'Lato', sans-serif;
     font-weight: bold;
-    text-align: center;
-    margin-top: 2em;
+    line-height: 100px;
+    margin-left: 98px;
 }
 
 #container-about {
@@ -33,7 +40,7 @@ h1 {
     width: 40%; 
     margin:5px; 
     padding: 1em;
-    height: 50%; 
+    height: 40%; 
 }
 
 #left {
