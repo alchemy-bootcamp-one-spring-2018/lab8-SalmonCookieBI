@@ -9,6 +9,13 @@ header {
   grid-template-rows: 10px 1fr 10px;
 }
 
+#nav-logo {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  align-self: center;
+  max-height: 100px; 
+}
+
 .main-container {
   perspective: 1px;
   transform-style: preserve-3d;
@@ -25,7 +32,9 @@ header {
 }
 
 #nav {
-  display: inline;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  align-self: center;
 }
 
 #nav a {
@@ -39,6 +48,19 @@ header {
 
 #nav a:hover {
   color: #915766;
+}
+
+#sign-in {
+  grid-column: 5 / 6;
+  grid-row: 2 / 3;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+  font-size: .8em;
+  justify-self: end;
+}
+
+#sign-in button {
+  margin: 10px;
 }
 
 

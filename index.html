@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <img src="./images/sclogo-g.png">
+        <img id="nav-logo" src="./images/sclogo-g.png">
         
         <ul id="nav">
             <a href="#">ABOUT</a>
@@ -20,10 +20,14 @@
         </ul>
         
         <form id="sign-in">
+            <section>
                 <label>Username:</label>
                 <input type="text" name="username" required>
+            </section>
+            <section>
                 <label>Password:</label>
                 <input type="password" name="password" required>
+            </section>
                 <button type="submit">Sign In</button>
         </form>
     </header>
