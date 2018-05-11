@@ -13,21 +13,27 @@
 </head>
 <body>
     <span id="coffee"></span>    
-        <div id="salmon">
-            <div id="container-main">
-                <h1>Fish in A Cup!</h1>
-                <span>
-                    <a href="./index.html">Home</a>
-                    <a href="./about.html">About Us</a>
-                </span>
-                <table id="table">
-                    <thead id="head"></thead>
-                    <tbody id="body"></tbody>
-                    <tfoot id="foot"></tfoot>
-                </table>
-                <div id="updates">
+        <div id="salmon"></div>
+        <div id="container-main">
+            <h1>Fish in A Cup!</h1>
+            <span>
+                <a class="btn-link" href="./index.html">Home</a>
+                <a class="btn-link" href="./about.html">About Us</a>
+            </span>
+            <table id="table">
+                <thead id="head"></thead>
+                <tbody id="body"></tbody>
+                <tfoot id="foot"></tfoot>
+            </table>
+            <div id="updates">
+                <form id="add-new">
+                    Location:<input id="txt" type="text" name="location" required>
+                    Mininmum:<input id="txt" type="number" name="min" required>
+                    Maximum:<input id="txt" type="number" name="max" required>
+                    Average:<input id="txt" type="number" name="avg" required>
+                    <input type="submit" id="submit">
                     <input type="button" id="randomize-btn" value="Randomize!">
-                </div>
+                </form>
             </div>
         </div>
     <script src="js/object.js"></script>

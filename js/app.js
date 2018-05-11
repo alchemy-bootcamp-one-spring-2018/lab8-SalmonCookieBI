@@ -3,7 +3,7 @@
 // Build Times
 let times = ['Location'];
 for(let i = 6; i < 13; i++) {
-    if(i===12) {
+    if(i === 12) {
         times.push(i + ':00 PM');   
     }
     else {
@@ -30,6 +30,7 @@ let cookieArray = [pike, seatac, center, capitol, alki];
 for(let i in cookieArray) {
     cookieArray[i].cookieData();
 }
+
 
 // Header/Footer stuff
 function header() {
@@ -60,6 +61,7 @@ function addUp() {
 
 function randomize() {
     clear();
+    localStorage.clear();
     for(let i in cookieArray) {
         cookieArray[i].cookieData();
     }

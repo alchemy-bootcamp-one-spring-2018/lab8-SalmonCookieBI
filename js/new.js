@@ -9,3 +9,20 @@ function addRow() {
     cookieArray.push(tempCookie);
     update();
 }
+
+function addNew(e) {
+    console.log(e);
+    
+    e.preventDefault();
+    console.log(e);
+    let location = e.target.location.value;
+    let min = e.target.min.value;
+    let max = e.target.max.value;
+    let avg = e.target.avg.value;
+    let temp = new Cookie(location, min, max, avg);
+    temp.cookieData();
+    cookieArray.push(temp);
+    clear();
+    update();
+    console.log('adding new', location, min, max, avg);
+}
