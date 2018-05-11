@@ -83,7 +83,7 @@ body {
     margin: 33px auto;
 }
 
-a {
+.btn-link {
     display: inline;
     text-decoration: none;
     border: 1px solid white;
