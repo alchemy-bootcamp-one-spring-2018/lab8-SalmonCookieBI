@@ -1,4 +1,4 @@
-/* globals timesArray */
+/* globals randomNum calculateRandom locationsArray timesArray */
 
 function displayHeader() {
     var thead = document.getElementById('thead');
@@ -24,3 +24,17 @@ function displayTimes(j) {
 
 }
 displayHeader();
+
+function customerAvg() {
+    let newArray = [];
+    for(let i = 0; i < 12; i++) {
+        var min = locationsArray[i].min;
+        var max = locationsArray[i].max;
+
+        let randomNum;
+        calculateRandom(min, max);
+        newArray.push(randomNum);
+
+        // return newArray =
+    }
+}
