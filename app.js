@@ -2,11 +2,11 @@
 'use strict';
 
 //get inclusive random customer count; source: MDN
-function getRandomIntInclusive(min, max){
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
+// function getRandomIntInclusive(min, max){
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min)) + min;
+// }
 
 var attachTrElements = document.getElementById('table-body');
 var attachThElements = document.getElementById('table-head');
@@ -85,7 +85,7 @@ function tableFooterTotals(){
     newThElementTotals.textContent = allDailyTotals;
     row.appendChild(newThElementTotals);
 }
-//test for git
+
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
