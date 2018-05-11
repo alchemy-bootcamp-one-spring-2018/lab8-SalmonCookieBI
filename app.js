@@ -9,11 +9,14 @@ function getRandomCustomer(min, max){
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
+//these variables are where elements are appended to be displayed
 var attachTrElements = document.getElementById('table-body');
 var attachThElements = document.getElementById('table-head');
 
 var x = 0;
+//this function populates the empty 'hours' array above here, and then uses the
+//new data from the array to populate the <thead> tag in the index, dynamically creating
+//the header across the top
 function time(){
     var row = document.createElement('tr');
     attachThElements.appendChild(row);
@@ -34,8 +37,14 @@ function time(){
 }
 
 time();
-
-
+/*This function does most of the heavy lifting. It does almost everthing there
+is to do in this table. the lower for loop runs in comparison to how long the
+hours array is, and calculates random numbers for each hour of sales from the
+stores in data.js. It then attaches that data onto td elements and appends those
+td elements to a tr element in the for loop above it. This for loop creates the
+row elements and appends them onto the table body, which is how the rows with
+the randomly generated content are displayed across the screen. The amount of
+rows that are created is dictated by how many objects we have put in data.js */
 function calculate(){
     for(var i = 0; i < cookieShops.length; i++){
         //create tr
@@ -52,8 +61,8 @@ function calculate(){
             var newTdElement = document.createElement('td');
             var totalElement = document.createElement('td');
             newTdElement.textContent = cookieSales;
+            newTdElement.setAttribute('class', j);
             totalElement.textContent = cookieTotals;
-            console.log(cookieTotals);
             row.appendChild(newTdElement);
         }
         row.appendChild(totalElement);
@@ -63,4 +72,3 @@ function calculate(){
 calculate();
 
 const rowInfo = document.getElementById('row-0');
-console.log(rowInfo);
