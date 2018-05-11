@@ -62,5 +62,7 @@ function calculate(){
 
 calculate();
 
+
+
 const rowInfo = document.getElementById('row-0');
 console.log(rowInfo);
