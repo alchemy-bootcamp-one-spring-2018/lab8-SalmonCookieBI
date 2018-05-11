@@ -1,3 +1,7 @@
+/**/
+/**/
+'use strict';
+
 const cookieShops = [
 
     {
@@ -6,7 +10,6 @@ const cookieShops = [
         maxCustomer: 65,
         avgPerCustomer: 6.3,
     },
-
     {
         location: 'Pioneer Square',
         minCustomer: 3,
@@ -19,4 +22,4 @@ const cookieShops = [
         maxCustomer: 38,
         avgPerCustomer: 3.7,
     }
-]
+];
