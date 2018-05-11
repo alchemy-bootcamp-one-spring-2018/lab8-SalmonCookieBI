@@ -19,7 +19,30 @@
         <tfoot id="table-footer">
         </tfoot>
     </table>
-    
+    <form>
+        <fieldset>
+
+            <legend>Add Location</legend>
+            <div>
+                <label>Location</label><br />
+                <input type="text" name="newLocation" />
+            </div>
+            <div>
+                <label>Min Customers Per Hour</label><br />
+                <input type="number" name="newMin" />
+            </div>
+            <div>
+                <label>Max Customers Per Hour</label><br />
+                <input type="number" name="newMax" />
+            </div>
+            <div>
+                <label>Average Cookies Per Customer</label><br />
+                <input type="number" name="newAverage" />
+            </div>
+            <button onclick="addNewStore()">Add</button>
+        </fieldset>
+    </form>
+
     <script src="functions.js"></script>
     <script src="app.js"></script>
 </body>
