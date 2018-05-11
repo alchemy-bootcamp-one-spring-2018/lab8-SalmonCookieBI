@@ -26,14 +26,15 @@ function totalCookies(array) {
     return total;
 }
 
+let hourlyTotal = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
 function hourlyTotalCookies(array) {
-    let total = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for(let i = 0; i < array.length; i++) {
         for(let j = 0; j < array[i].cookies.length; j++) {
-            total[j] += array[i].cookies[j];
+            hourlyTotal[j] += array[i].cookies[j];
         }
     }
-    return total;
+    return hourlyTotal;
 }
 
 function populateTable(array) {
@@ -59,15 +60,15 @@ function populateFooter(array) {
     const shopRow = document.getElementById('shop-row');
     const shopData = shopRow.content.querySelectorAll('td');
 
-    const hourlyTotal = hourlyTotalCookies(array);
+    const hourlyCookies = hourlyTotalCookies(array);
       
     shopData[0].textContent = 'Hourly Totals for All Locations';
 
     for(let j = 0; j < 15; j++) {
-        shopData[j + 1].textContent = hourlyTotal[j];
+        shopData[j + 1].textContent = hourlyCookies[j];
     }
 
-    shopData[16].textContent = totalCookies(hourlyTotal);
+    shopData[16].textContent = totalCookies(hourlyCookies);
 
     const tfoot = document.querySelector('tfoot');
     const clone = document.importNode(shopRow.content, true);
@@ -82,9 +83,26 @@ function addRow() {
     const inputMax = document.getElementById('max').value;
     const inputAvg = document.getElementById('avg').value;
 
-    const newShop = new BizData(inputName , inputMin, inputMax , inputAvg);
+    const newShop = new BizData(inputName, inputMin, inputMax, inputAvg);
     console.log(newShop);
+    const newShopArray = [newShop];
+    randomCustomerAmount(newShopArray);
+    
+    populateTable(newShopArray);
 
+    //Grab tfoot's td[1].value
+    const shopFoot = document.querySelector('tfoot');
+    console.log('footer', shopFoot);
+    const shopData = shopFoot.querySelectorAll('td');
+
+
+    for(let i = 0; i < 15; i++) {
+        hourlyTotal[i] += newShop.cookies[i];
+        shopData[i + 1].textContent = hourlyTotal[i];
+
+    }
+    //Add cookies to tfoot's value
+    //textcontent to new total
 }
 
 randomCustomerAmount(shops);
