@@ -22,7 +22,7 @@ class Cookie {
     }
 
     renderMe() {
-        render(this.cookies, 'body', 'body-data');
+        render(this.people, 'body', 'body-data');
     }
 
 }

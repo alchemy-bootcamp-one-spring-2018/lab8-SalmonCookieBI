@@ -3,14 +3,30 @@
     0% {
         /* transform: rotate(0deg); */
         background-position-x: 0;
-    } 50% {
+    } 60% {
         /* transform: rotate(15deg); */
-        background-position-y: -13%;
+        background-position-y: -30%;
         background-position-x: 250px;
     } 100% {
         /* transform: rotate(0deg); */
         background-position-x: 500px;
     }
+
+}
+
+@keyframes coffee-slide {
+    0% {
+        /* transform: rotate(0deg); */
+        background-position-x: 500;
+    } 60% {
+        /* transform: rotate(15deg); */
+        background-position-y: 50%;
+        background-position-x: 250px;
+    } 100% {
+        /* transform: rotate(0deg); */
+        background-position-x: 100px;
+    }
+
 }
 
 @keyframes water-bounce {
@@ -38,6 +54,17 @@
 }
 
 /* STYLING */
+
+h1 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #F67280;
+    background: transparent;
+    margin-top: 110px;
+    z-index: 9;
+    }
+
 body {
     padding: 0;
     margin: 0;
@@ -83,23 +110,31 @@ table {
     text-align: left;
     border-collapse: collapse;
     border: 1px solid white;
-    background: rgba(0, 0, 0, 0);
+    background: #090089;
     color: white;
 }
 
 #header, #body-total {
-    background: rgb(0, 0, 100);
+    background: #011F3F;
     font-weight: bold;
+    color: #F67280;
 }
 
 #body-data {
     animation: body-water 3s alternate infinite;
 }
 
+html {
+    background-color:#355C7D;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 #footer #body-times{
     background: black;
     color: white;
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
+
 }
 
 tr {
@@ -116,7 +151,26 @@ table td {
     position: absolute;
     /* display: block; */
     width: 100%;
-    height: 100%;
-    background: url('../images/bg-salmon.png');
+    height: 50%;
+    background: url('../images/salmon.png');
     animation: salmon-swim 30s linear infinite;
+    z-index: 10;
 }
+
+#coffee {
+    position: absolute;
+    /* display: block; */
+    width: 100%;
+    height: 50%;
+    background: url('../images/Cup-o-coffee-simple.png');
+    animation: coffee-slide 30s linear infinite;
+    z-index: 10;
+}
+
+
+/* hover color */
+td:hover {
+    background-color: #429FFD;
+    font-weight: bold;
+
+  }
