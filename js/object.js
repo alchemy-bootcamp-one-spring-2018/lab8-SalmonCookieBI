@@ -11,7 +11,7 @@ class Cookie {
     cookieData() {
         this.people = [this.location];
         for(let i = 0; i < 15; i++) {
-            let tempAvg = Math.ceil(((Math.random() * parseInt(this.max) - parseInt(this.min)) + parseInt(this.min)));
+            let tempAvg = Math.ceil(((Math.random() * (parseInt(this.max) - parseInt(this.min)) + parseInt(this.min))) * this.avg);
             console.log('max', this.max, 'min', this.min, 'avg', this.avg, 'temp', tempAvg);
             this.people.push(tempAvg);
         }
