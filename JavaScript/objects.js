@@ -6,7 +6,10 @@ class Salmon {
         this.max = max,
         this.avg = avg,
         this.customer = [];
+
     }
+    
+
 }
 let timesArray = ['5a.m.', '6a.m.', '7a.m.', '8a.m.', '9a.m.', '10a.m.', '11a.m', '12p.m.', '1p.m.', '2p.m.', '3p.m'];
 
@@ -23,3 +26,18 @@ function calculateRandom(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function submitLocationData() {
+    event.preventDefault();
+    var newLocation = event.target.newLocation.value;
+    var min = parseInt(event.target.min.value);
+    var max = parseInt(event.target.max.value);
+    var average = parseInt(event.target.average.value);
+    locationsArray.push(new Salmon(newLocation, min, max, average));
+    console.log(locationsArray);
+
+
+}
+
+const storeEntry = document.getElementById('locationForm');
+storeEntry.addEventListener('submit', submitLocationData);
