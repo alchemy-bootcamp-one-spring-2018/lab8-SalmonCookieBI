@@ -1,5 +1,5 @@
-/* exported randomNum timesArray locationsArray calculateRandom  */
-/* globals displayBody*/
+/* exported addTotals  randomNum timesArray locationsArray calculateRandom  */
+/* globals displayFooter  displayBody*/
 
 class Salmon {
     constructor(locationName, min, max, avg) {
@@ -10,13 +10,13 @@ class Salmon {
         this.customer = [];
     }
     
-    customerAvg() {
+    customerAvg(i) {
         var min = this.min;
         var max = this.max;
-                
         var randomNum = calculateRandom(min, max);
-        this.customer.push(randomNum);
+        this.customer[i] = randomNum;
     }
+
 
 }
 
@@ -34,8 +34,23 @@ function calculateRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+
 }
 
+let totals = [];
+function addTotals() {
+    for(let i = 0; i < timesArray.length; i++){
+        totals[i] = 0;
+        for(let j = 0; j < locationsArray.length; j++){
+            totals[i] += locationsArray[j].customer[i];
+        }
+    }
+}
+function removeOldTotals(){
+    var node1 = document.getElementById('footRow');
+    node1.parentNode.removeChild(node1);
+     
+}
 function submitLocationData() {
     event.preventDefault();
     var newLocation = event.target.newLocation.value;
@@ -44,8 +59,10 @@ function submitLocationData() {
     var average = parseInt(event.target.average.value);
     locationsArray.push(new Salmon(newLocation, min, max, average));
     console.log(locationsArray);
-    
+    removeOldTotals();
+    addTotals();
     displayBody();
+    displayFooter();
 }
 
 const storeEntry = document.getElementById('locationForm');
