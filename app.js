@@ -19,17 +19,15 @@ let newStoreMin = document.getElementById('min-customers');
 let newStoreMax = document.getElementById('max-customers');
 let newStoreAvg = document.getElementById('avg-cookie');
 
-// const newStoreSubmit = document.getElementById('submit-data');
-// newStoreSubmit.addEventListener('submit', addNewStore, false);
-
 let grandTotal;
 let hourCell;
 
 function addNewStore() {
-    
     while(hourFooterTotal.firstChild) {
         hourFooterTotal.removeChild(hourFooterTotal.firstChild);
     }
+
+    grandCookieTotal = 0;
 
     let hourlyLabel = document.createElement('td');
     hourlyLabel.textContent = 'Hourly Totals for All Locations';
@@ -41,9 +39,6 @@ function addNewStore() {
     let storeAvg = parseFloat(newStoreAvg.value);
     
     let newStore = new StoreData(locationName, minCustomers, maxCustomers, storeAvg);
-    // storeArray.push(newStore);
-    // populateTableBody();
-    // console.log(storeArray);
 
     // start of repetition
     let newStoreCookieTotal = 0;
