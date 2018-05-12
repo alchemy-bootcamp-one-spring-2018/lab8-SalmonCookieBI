@@ -25,10 +25,12 @@ let capitol = new Cookie('Capitol Hill', 20, 38, 2.3);
 let alki = new Cookie('Alki', 2, 16, 4.6);
 
 let cookieArray = [];
+console.log('cookieArray []', cookieArray);
 
-if(!localStorage.cookieArray) {
+if(localStorage.cookieArray) {
     console.log('we have cookies');
     let temp = JSON.parse(localStorage.getItem('cookieArray'));
+    cookieArray = temp;
     console.log(cookieArray);
 } else {
     console.log('we dont have cookies');
@@ -38,7 +40,7 @@ if(!localStorage.cookieArray) {
 
 // Get some random digits
 for(let i in cookieArray) {
-    console.log(cookieArray);
+    console.log(i);
     cookieArray[i].cookieData();
 }
 
