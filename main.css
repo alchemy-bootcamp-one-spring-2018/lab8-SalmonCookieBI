@@ -1,57 +1,222 @@
+body {
+    background-color: #D5EEFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
 #index {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: lightblue;
+    background-color: #D5EEFF;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: #78BBE6;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 12px;
+}
+
+#home-description {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+#home-description p {
+    font-size: 20px;
+}
+
+#home-header {
+    font-size: 30px;
+}
+
+#home-promise {
+    font-size: 20px;
+}
+
+.content {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.content #salmon {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: block;
+    margin: auto;
+}
+
+#sales-link {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+/* https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset */
+.content p + p {
+    margin-top: 35px;
+}
+.content p {
+    display: block;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+}
+
+#old-pic {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    display: block;
+    margin: auto;
+}
+
+#caption {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#locations, #locations-list, #new-locations {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    margin: auto;
+}
+
+#locations {
+    padding-top: 40px;
+    width: 40%;
+    font-size: 33px;
+}
+
+.bold {
+    float: right;
+    margin-right: 150px;
+    font-weight: normal;
+}
+
+#locations-list {
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    width: 40%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#new-locations {
+    width: 40%;
+    padding-bottom: 100px;
+    font-size: 16px;
+}
+
+#contact {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding-bottom: 100px;
+}
+
+#contact-heading {
+    font-size: 30px;
+    padding-top: 20px;
 }
 
 #picture {
+    padding-top: 20px;
     margin: auto;
     display: flex;
     align-items: center; 
     justify-content: center;
 }
 
+#bakery-pic {
+    padding-top: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    margin-top: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    color: #FF895D;
+}
+
 #tagline {
+    margin-top: -35px;
     font-style: italic;
-    font-size: 40px;
+    font-size: 20px;
+    color: #FF895D;
+    font-family: 'Roboto Slab', serif;
     display: flex;
     align-items: center; 
     justify-content: center;
 }
 
-legend {
-    font-weight: bold;
-    font-size: 25px;
+/* https://www.w3schools.com/css/css_navbar.asp */
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    background-color: #78BBE6;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
 }
 
 fieldset {
     border-style: 5px solid black;
 }
 
-#story {
-    display: block;
-    width: 500px;
-}
-
 header {
-    background-color: azure;
+    background-color: #D5EEFF;
 }
 
-#title {
+.imgbox {
     display: flex;
-    align-items: center; 
-    justify-content: center;
-    font-size: 50px;
 }
 
-body {
-    background-color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
+/* https://stackoverflow.com/questions/1891857/how-do-you-stretch-an-image-to-fill-a-div-while-keeping-the-images-aspect-rat */
+.center-fit {
+    width: 100%;
+    flex: 1;
+    align-self: center;
+    overflow: auto;
 }
 
 #form {
     font-family: Arial, Helvetica, sans-serif;
     width: 375px;
-    background-color: lightblue;
+    background-color: #D5EEFF;
 }
 
 /* https://stackoverflow.com/questions/9402856/how-to-put-table-in-the-center-of-the-page-using-css */
@@ -63,7 +228,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightblue;
+    background-color: #D5EEFF;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables */
@@ -72,7 +237,7 @@ table {
 }
 
 thead tr th {
-    background-color: lightblue;
+    background-color: #D5EEFF;
 }
 
 th, td {
@@ -84,4 +249,8 @@ th, td {
 tfoot {
     border-top: 3px solid black;
     font-weight: bold;
+}
+
+#data-body {
+    padding: 25px 50px 100px 50px;
 }
