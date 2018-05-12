@@ -1,29 +1,75 @@
-/* made with help from http://divtable.com/table-styler/ */
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: #B1EFF5 */
-}
-
-h1, h2 {
+    color: rgb(39, 146, 146);
+    background-color: rgb(253, 237, 236);
     text-align: center;
 }
 
+img {
+    opacity: .9;
+    width: 1200px;
+    display: block;
+    margin: 0px auto;
+}
+
+h1 {
+    font-family: 'Merienda', cursive;
+    text-align: center;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: rgb(205, 92, 92);
+    font-size: 1.2em;
+}
+
+div {
+    display: inline-block;
+    width: 350px;
+    height: 200px;
+    vertical-align: middle;
+}
+
+ul {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-align: left;
+    color: rgb(205, 92, 92);
+    font-size: 1em;
+}
+
+a {
+    float: right;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: rgb(93, 39, 146);
+}
+
+p {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    color: rgb(93, 39, 146);
+    font-size: 1.3em;
+}
+
+
+
+/* Styling for table */
+
 table {
-    width: 90%;
+    width: 100%;
     text-align: center;
     font-size: 14px;
     border-collapse: collapse;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     /* background-color: #F5B7B1; */
 }
 
 td {
     border: 1px solid #FFFFFF;
     padding: 3px 4px;
+    color: black;
 }
 
 table td:nth-child(even) {
-    background: #CDF5B1;
+    background: rgb(243, 190, 185);
 }
 
 table thead {
@@ -44,12 +90,17 @@ td:first-of-type {
     font-weight: bold;
 }
 
-/* I thought this would style the left-most column, but it didn't work
-tr > td {
-    font-size: 16px;
+/* styling for the form */
+form {
+    color: rgb(93, 39, 146);
+    text-align: left;
+    font-size: 1.1em;
     font-weight: bold;
-} */
+}
 
-div {
+form div {
     display: inline-block;
+    width: 250px;
+    height: 50px;
+    vertical-align: middle;
 }
