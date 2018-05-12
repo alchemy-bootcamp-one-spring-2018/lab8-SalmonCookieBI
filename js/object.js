@@ -8,30 +8,29 @@ class Cookie {
         this.max = max;
         this.avg = avg;
     }
+}
 
-    cookieData() {
-        if(localStorage['cookies.' + this.location]){
-            // Retrieve the object from storage
-            var cookies = localStorage.getItem('cookies.' + this.location);
-            this.cookies = JSON.parse(cookies);
-        } else {
-            this.people = [];
-            for(let i = 0; i < 15; i++) {
-                let tempAvg = parseInt(Math.random() * (parseInt(this.max) - parseInt(this.min)) + parseInt(this.min));
-                this.people.push(tempAvg);
-            }
-            this.cookies = [this.location];
-            for(let i = 0; i < this.people.length; i++) {
-                this.cookies.push(parseInt(this.people[i] * this.avg));
-            }
-            this.cookies.push(parseInt(this.people.reduce((a, b) => a + b) * this.avg));
-            // Put the object into storage
-            localStorage.setItem('cookies.' + this.location, JSON.stringify(this.cookies));
+function cookieData(object) {
+    if(localStorage['cookies.' + object.location]){
+        // Retrieve the object from storage
+        var cookies = localStorage.getItem('cookies.' + object.location);
+        object.cookies = JSON.parse(cookies);
+    } else {
+        object.people = [];
+        for(let i = 0; i < 15; i++) {
+            let tempAvg = parseInt(Math.random() * (parseInt(object.max) - parseInt(object.min)) + parseInt(object.min));
+            object.people.push(tempAvg);
         }
+        object.cookies = [object.location];
+        for(let i = 0; i < object.people.length; i++) {
+            object.cookies.push(parseInt(object.people[i] * object.avg));
+        }
+        object.cookies.push(parseInt(object.people.reduce((a, b) => a + b) * object.avg));
+        // Put the object into storage
+        localStorage.setItem('cookies.' + object.location, JSON.stringify(object.cookies));
     }
+}
 
-    renderMe() {
-        render(this.cookies, 'body', 'body-data');
-    }
-
+function renderMe(object) {
+    render(object.cookies, 'body', 'body-data');
 }

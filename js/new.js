@@ -17,7 +17,7 @@ function addNew(e) {
     let max = e.target.max.value;
     let avg = e.target.avg.value;
     let temp = new Cookie(location, min, max, avg);
-    temp.cookieData();
+    cookieData(temp);
     cookieArray.push(temp);
     localStorage.setItem('cookieArray', JSON.stringify(cookieArray));
     // console.log('cookieArray', cookieArray);
