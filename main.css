@@ -1,8 +1,23 @@
+body {
+    background-color: #76b39d;
+    
+}
 table, td {
-     border-collapse: collapse;
+    border-collapse: collapse;
     border: 1px solid darkmagenta;
     padding: 2px;
+    background-color: #FDB44B;
+    color: darkblue;
+    margin: 75px auto 0;
 }
  thead tr {
     border: 1px solid darkmagenta;
+ }
+
+ fieldset {
+     margin: 10px auto;
+     color: white;
+     font-family: sans-serif;
+     width: 225px;
+     background-color: salmon;
  }
