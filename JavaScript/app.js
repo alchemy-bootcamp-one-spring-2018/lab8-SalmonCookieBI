@@ -30,6 +30,8 @@ function displayBody() {
         for(let j = 0; j < timesArray.length; j++){
             var grandChild = document.createElement('td');
             child.appendChild(grandChild);
+
+            locationsArray[i].customerAvg();
             
             grandChild.textContent = locationsArray[i].customer[j];
         }
@@ -58,21 +60,7 @@ function displayFooter() {
     
 }
 
-function customerAvg() {
-    for(let h = 0; h < locationsArray.length; h++){
-        
-        for(let i = 0; i < timesArray.length; i++) {
-            var min = locationsArray[h].min;
-            var max = locationsArray[h].max;
-            
-            var randomNum = calculateRandom(min, max);
-            locationsArray[h].customer.push(randomNum);
-        }
-    }
-    
-}
 
 displayHeader();
-customerAvg();
 displayBody();
 displayFooter();
