@@ -4,31 +4,43 @@
 }
 
 #picture {
-     top:20px;
-     left: 400px;
-     align-items: center; 
-    justify-content: center; 
-    position: relative;
+    margin: auto;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
 }
 
 #tagline {
     font-style: italic;
-    font-size: 30px;
+    font-size: 40px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+fieldset {
+    border-style: 5px solid black;
+}
+
+#story {
+    display: block;
+    width: 500px;
 }
 
 header {
-/*    display: flex;
-     align-items: center; 
-    justify-content: center; */
     background-color: azure;
 }
 
 #title {
-        display: flex;
-     align-items: center; 
+    display: flex;
+    align-items: center; 
     justify-content: center;
-    
-
+    font-size: 50px;
 }
 
 body {
