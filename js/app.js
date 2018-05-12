@@ -31,6 +31,11 @@ function addNewStore() {
     let minCustomers = parseInt(newStoreMin.value);
     let maxCustomers = parseInt(newStoreMax.value);
     let storeAvg = parseFloat(newStoreAvg.value);
+
+    newStoreLocation.value = '';
+    newStoreMin.value = '';
+    newStoreMax.value = '';
+    newStoreAvg.value = '';
     
     let newStore = new StoreData(locationName, minCustomers, maxCustomers, storeAvg);
 
