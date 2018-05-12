@@ -1,5 +1,6 @@
 /* exported randomNum timesArray locationsArray calculateRandom  */
 /* globals displayBody*/
+
 class Salmon {
     constructor(locationName, min, max, avg) {
         this.locationName = locationName,
@@ -7,11 +8,18 @@ class Salmon {
         this.max = max,
         this.avg = avg,
         this.customer = [];
-
     }
     
+    customerAvg() {
+        var min = this.min;
+        var max = this.max;
+                
+        var randomNum = calculateRandom(min, max);
+        this.customer.push(randomNum);
+    }
 
 }
+
 let timesArray = ['5a.m.', '6a.m.', '7a.m.', '8a.m.', '9a.m.', '10a.m.', '11a.m', '12p.m.', '1p.m.', '2p.m.', '3p.m'];
 
 let airport = new Salmon('Airport', 20, 100, 60);
@@ -36,8 +44,8 @@ function submitLocationData() {
     var average = parseInt(event.target.average.value);
     locationsArray.push(new Salmon(newLocation, min, max, average));
     console.log(locationsArray);
+    
     displayBody();
-
 }
 
 const storeEntry = document.getElementById('locationForm');
