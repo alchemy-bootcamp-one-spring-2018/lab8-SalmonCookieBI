@@ -9,9 +9,10 @@ table, td {
     background-color: #FDB44B;
     color: darkblue;
     margin: 75px auto 0;
+    padding: 5px;
 }
  thead tr {
-    border: 1px solid darkmagenta;
+     border: 1px solid darkmagenta;
  }
 
  fieldset {
