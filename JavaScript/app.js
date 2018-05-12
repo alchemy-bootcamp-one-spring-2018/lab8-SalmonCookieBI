@@ -29,7 +29,6 @@ function displayBody() {
         for(let j = 0; j < timesArray.length; j++){
             var grandChild = document.createElement('td');
             child.appendChild(grandChild);
-
             locationsArray[i].customerAvg(j);
             grandChild.textContent = locationsArray[i].customer[j];
         }
@@ -50,7 +49,6 @@ function displayFooter() {
         addTotals();
         child.textContent = totals[i];
     }
-    
 }
 
 
