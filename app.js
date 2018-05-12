@@ -19,6 +19,7 @@ function tableHeaderTime(){
     attachThElements.appendChild(row);
     var th = document.createElement('th');
     th.textContent = 'LOCATIONS';
+    row.setAttribute("id", "header-row")
     row.appendChild(th);
     for(var i = 6; i < 21; i++){
         if(i < 12){
@@ -37,6 +38,7 @@ function tableHeaderTime(){
     x++;
     var newThElementTotals = document.createElement('th');
     newThElementTotals.textContent = 'LOCATION TOTALS';
+    newThElement.setAttribute('class', '"mdl-data-table__cell--non-numeric"');
     row.appendChild(newThElementTotals);
 }
 
@@ -56,7 +58,7 @@ function tableBodyCalculate(){
             cookieTotals += cookieSales;
             var newTdElement = document.createElement('td');
             var totalElement = document.createElement('td');
-            newTdElement.setAttribute('id', 'row-' + i + ' col-' + j);
+            newTdElement.setAttribute('class', '"mdl-data-table__cell--non-numeric"');
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
             row.appendChild(newTdElement);
@@ -77,6 +79,7 @@ function tableFooterTotals(){
     for(var i = 0; i < hours.length; i++){
         var newTdElement = document.createElement('td');
         newTdElement.textContent = hourlyTotals;
+        newTdElement.setAttribute('class', '"mdl-data-table__cell--non-numeric"');
         console.log('hourlyTotals', hourlyTotals);
         row.appendChild(newTdElement);
     }

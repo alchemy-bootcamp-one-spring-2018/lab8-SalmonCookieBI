@@ -2,44 +2,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(40, 111, 158);
     font-family: Arial, Helvetica, sans-serif;
+    color: #194769;
+    background-color: #F6F6E9
+    
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5em;
-    color: rgb(255, 255, 255);
-}
-
-table {
-    border-collapse: collapse;
-    border: 2px double black;
+    color: #194769;
 }
 
 thead, th {
     font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
 }
 
-th {
-    background: rgb(216, 87, 173);
+#header-row {
     padding: 10px;
+    background-color: #D7EEF2
 }
 
 tbody {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    background-color:#F6F6E9
+}
+
+#table-foot{
+    background-color: #F2855E;
+    color: #F6F6E9
 }
 
 td {
     padding: 10px;
-    border: 2px solid black
-}
-
-tfoot {
-    background: rgb(48, 68, 184);
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: #194769
 }
