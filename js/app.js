@@ -15,7 +15,7 @@ for(let i = 1; i < 9; i++) {
 }
 times.push('Totals');
 
-let totals = [];
+// let totals = [];
 
 // Instantiate cookie objects (Location, Min, Max, Avg)
 let pike = new Cookie('1st and Pike', 23, 65, 6.7);
@@ -25,25 +25,20 @@ let capitol = new Cookie('Capitol Hill', 20, 38, 2.3);
 let alki = new Cookie('Alki', 2, 16, 4.6);
 
 let cookieArray = [];
-// console.log('cookieArray []', cookieArray);
 
 if(localStorage.cookieArray) {
-    // console.log('we have cookies');
     let temp = JSON.parse(localStorage.getItem('cookieArray'));
     cookieArray = temp;
-    // console.log(cookieArray);
 } else {
-    console.log('we dont have cookies');
     cookieArray = [pike, seatac, center, capitol, alki];
     localStorage.setItem('cookieArray', JSON.stringify(cookieArray));
 }
 
 // Get some random digits
 for(let i in cookieArray) {
-    console.log(i);
+    // console.log(i);
     cookieData(cookieArray[i]);
 }
-
 
 // Header/Footer stuff
 function header() {
@@ -51,26 +46,21 @@ function header() {
 }
 
 function footer() {
-    addUp();
-    render(totals, 'body', 'body-total');
+    render(addUp(), 'body', 'body-total');
 }
-
-// Call some functions
-header();
-update();
 
 function addUp() {
     // Reset totals
-    totals = ['Total'];
-    // totals.push('Totals');
+    let totals = ['Total'];
     for(let i = 1; i <= 16; i++) {
+        // Explicitly give value before accumulating
         totals[i] = 0;
         for(let j in cookieArray) {
             totals[i] += cookieArray[j].cookies[i];
         }
     }
+    return totals;
 }
-
 
 function randomize() {
     clear();
@@ -81,3 +71,7 @@ function randomize() {
     }
     update();
 }
+
+// Call some functions
+header();
+update();
