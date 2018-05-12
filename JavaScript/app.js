@@ -19,6 +19,7 @@ function displayHeader() {
 
 function displayBody() {
     var tbody = document.getElementById('tbody');
+    tbody.textContent = '';
     for(let i = 0; i < locationsArray.length; i++){
         var child = document.createElement('tr');
         var local = document.createElement('td');
@@ -52,7 +53,7 @@ function displayFooter() {
         // child.appendChild(totals);
         parent.appendChild(child);
         
-        child.textContent = '0';
+        child.textContent = locationsArray[i];
     }
     
 }

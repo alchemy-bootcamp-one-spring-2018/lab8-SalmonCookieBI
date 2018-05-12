@@ -1,4 +1,5 @@
-/* exported randomNum timesArray locationsArray calculateRandom*/
+/* exported randomNum timesArray locationsArray calculateRandom  */
+/* globals displayBody*/
 class Salmon {
     constructor(locationName, min, max, avg) {
         this.locationName = locationName,
@@ -35,7 +36,7 @@ function submitLocationData() {
     var average = parseInt(event.target.average.value);
     locationsArray.push(new Salmon(newLocation, min, max, average));
     console.log(locationsArray);
-
+    displayBody();
 
 }
 
