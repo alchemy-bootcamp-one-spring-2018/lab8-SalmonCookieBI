@@ -12,6 +12,17 @@ class Location {
         return Math.floor(Math.random() * (this.maximum - this.minimum) + this.minimum);
     }
 }
+
+function submitLocationData(event) {
+    event.preventDefault();
+    var locationInput = event.target.location.value;
+    var minimum = parseInt(event.target.minimum.value);
+    var maximum = parseInt(event.target.maximum.value);
+    var averageCookies = parseInt(event.target.average.value);
+    arrayOfLocationObjects.push(new Location(locationInput, minimum, maximum, averageCookies));
+    console.log('inputs are:', locationInput, minimum, maximum, averageCookies);
+    console.log(arrayOfLocationObjects);
+}
     
     
 var pdxAirport = new Location('PDX Airport', 23, 65, 6.3);
@@ -19,11 +30,11 @@ var pioneerSquare = new Location('Pioneer Square', 3, 24, 1.2);
 var powells = new Location('Powell\'s', 11, 38, 3.7);
 var stjohns = new Location('St. John\'s', 20, 38, 2.3);
 var waterfront = new Location('Waterfront', 2, 16, 4.6);
-var home = new Location('home', 17, 30, 2.5);
     
-var arrayOfLocationObjects = [pdxAirport, pioneerSquare, powells, stjohns, waterfront, home];
+var arrayOfLocationObjects = [pdxAirport, pioneerSquare, powells, stjohns, waterfront];
     
-    
+
+
 //console.log(pdxAirport.randomCustomerNum(minimum, maximum));
     
 var headerArray = ['Location', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Total'];
@@ -34,7 +45,6 @@ function hoursHeader() {
     for(let i = 0; i < headerArray.length; i++) {
         const th = document.createElement('th');
         tr.appendChild(th);
-        console.log(headerArray[i]);
         th.textContent = headerArray[i];
     }
     
@@ -63,19 +73,9 @@ function locationColumn() {
 locationColumn();
 
 
-var formData = document.querySelector('#submit');
+var formData = document.querySelector('form');
 formData.addEventListener('submit', submitLocationData);
 
-function submitLocationData(e) {
-    e.preventDefault();
-    var locationInput = document.getElementById('location-input').value;
-    var minimum = parseInt(document.getElementById('minimum').value);
-    var maximum = parseInt(document.getElementById('maximum').value);
-    var averageCookies = parseInt(document.getElementById('average-cookies').value);
-    new Location(locationInput, minimum, maximum, averageCookies);
-    console.log(locationInput);
-    
-}
 
     
 
