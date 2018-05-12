@@ -5,12 +5,17 @@ body {
     /* background-color: #B1EFF5 */
 }
 
+img {
+    width: 75px;
+    height: 75px;
+}
+
 h1, h2 {
     text-align: center;
 }
 
 table {
-    width: 90%;
+    width: 100%;
     text-align: center;
     font-size: 14px;
     border-collapse: collapse;
@@ -50,6 +55,9 @@ tr > td {
     font-weight: bold;
 } */
 
-div {
+/* styling for the form */
+
+form div {
     display: inline-block;
+    width: 250px
 }
