@@ -22,7 +22,18 @@ h1 {
 
 p {
     text-align: justify;
+    text-align: center;
+    margin: auto;
     background-color: #011F3F;
     padding: 1em;
     width: 60%;
+}
+
+div {
+    text-align: center;
+}
+.pic {
+    width: 100px;
+    align-items: center;
+
 }
