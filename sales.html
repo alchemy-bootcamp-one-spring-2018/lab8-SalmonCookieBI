@@ -3,10 +3,13 @@
 
 <head>
     <title>Salmon Cookies Schedule</title>
+    <link href="https://fonts.googleapis.com/css?family=Merienda" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a href="index.html">Home</a>
+
     <h1>Glitter Salmon Cookies Schedule</h1>
 
     <table>
@@ -24,23 +27,28 @@
         <fieldset>
             <legend>Add Location</legend>
             <div>
-                <label>Location</label><br />
+                <label>Location</label>
+                <br />
                 <input type="text" name="newLocation" required/>
             </div>
             <div>
-                <label>Min Customers Per Hour</label><br />
-                <input type="number" name="newMin" required min="0"/>
+                <label>Min Customers Per Hour</label>
+                <br />
+                <input type="number" name="newMin" required min="0" />
             </div>
             <div>
-                <label>Max Customers Per Hour</label><br />
+                <label>Max Customers Per Hour</label>
+                <br />
                 <input type="number" name="newMax" required min="0" />
             </div>
             <div>
-                <label>Average Cookies Per Customer</label><br />
-                <input type="number" name="newAverage" required step="0.1" min="0"/>
+                <label>Average Cookies Per Customer</label>
+                <br />
+                <input type="number" name="newAverage" required step="0.1" min="0" />
             </div>
             <br />
-            <button type="submit">Add</button>  <output name="errorMsg"></output>
+            <button type="submit">Add</button>
+            <output name="errorMsg"></output>
         </fieldset>
     </form>
 

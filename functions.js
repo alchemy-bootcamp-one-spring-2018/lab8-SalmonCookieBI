@@ -8,7 +8,7 @@ hourlyTotals[0] = 'Total per hour';
 var grandTotal = 0;
 
 // this defines the hour periods that we are tracking.  Changing this will automatically change the number of columns in the table.
-var hoursArray = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', 'Noon', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM', '8PM'];
+var hoursArray = ['6AM', '7AM', '8AM', '9AM', '10AM', '11AM', 'Noon', '1PM', '2PM', '3PM', '4PM', '5PM', '6PM', '7PM'];
 
 // this function takes an array of data, puts each item into a td, and adds the completed row to the specified parent
 function addTableRow(columnValueArray, parentElement) {
@@ -27,7 +27,7 @@ function getRandomInt(min, max) {
 }
 
 class Store {
-    
+
     constructor(name, minCustomers, maxCustomers, cookiesPerCustomer) {
         this.name = name;
         this.minCustomers = minCustomers;
@@ -68,7 +68,7 @@ class Store {
 
 // Create array of Stores
 const stores = [
-    new Store('PDX Airport', 23, 65, 6.3), 
+    new Store('PDX Airport', 23, 65, 6.3),
     new Store('Pioneer Square', 3, 24, 1.2),
     new Store('Powell\'s', 11, 38, 3.7),
     new Store('St. John\'s', 20, 38, 2.3),
@@ -77,8 +77,8 @@ const stores = [
 
 // this function will add a new store to the list (called by the collectNewStore event)
 function addNewStore(newLocation, newMin, newMax, newAverage) {
-    const parentElement = document.getElementById ('table-body');
-    const newStore = new Store (newLocation, newMin, newMax, newAverage);
+    const parentElement = document.getElementById('table-body');
+    const newStore = new Store(newLocation, newMin, newMax, newAverage);
     stores.push(newStore);
     newStore.createValueArray();
     newStore.writeRow(parentElement);
@@ -102,7 +102,7 @@ function collectNewStore(event) {
     event.target.newMin.value = '';
     event.target.newMax.value = '';
     event.target.newAverage.value = '';
-    addNewStore (newStoreName, newStoreMin, newStoreMax, newStoreAverage);
+    addNewStore(newStoreName, newStoreMin, newStoreMax, newStoreAverage);
 }
 
 // event listener(s)

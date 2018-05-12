@@ -13,7 +13,7 @@ addTableRow(headerArray, parentElement);
 
 // add all the locations to a table (loop through list of stores)
 parentElement = document.getElementById('table-body');
-for(var i = 0; i < stores.length ; i++) {
+for(var i = 0; i < stores.length; i++) {
     stores[i].writeRow(parentElement);
 }
 
