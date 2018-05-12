@@ -2,11 +2,11 @@
 'use strict';
 
 //get inclusive random customer count; source: MDN
-function getRandomIntInclusive(min, max){
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-}
+// function getRandomIntInclusive(min, max){
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min)) + min;
+// }
 
 var attachTrElements = document.getElementById('table-body');
 var attachThElements = document.getElementById('table-head');
@@ -73,8 +73,8 @@ var allDailyTotals = 'All Location Totals';
 function tableFooterTotals(){
     var row = document.createElement('tr');
     attachTrFootElements.appendChild(row);
-    var th = document.createElement('th');
-    th.textContent = 'HOUR TOTALS';
+    var th = document.createElement('td');
+    th.textContent = 'HOURLY TOTALS';
     row.appendChild(th);
     for(var i = 0; i < hours.length; i++){
         var newTdElement = document.createElement('td');
@@ -84,11 +84,11 @@ function tableFooterTotals(){
         row.appendChild(newTdElement);
     }
     //adding a daily total cell after hourly totals loop finishes
-    var newThElementTotals = document.createElement('th');
+    var newThElementTotals = document.createElement('td');
     newThElementTotals.textContent = allDailyTotals;
     row.appendChild(newThElementTotals);
 }
-//test for git
+
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();

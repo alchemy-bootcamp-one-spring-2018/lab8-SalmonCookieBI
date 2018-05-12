@@ -23,29 +23,31 @@
     <p></p>
     <form id="new-location-form">
         <fieldset>
-            <legend>Enter New Location Data</legend>
-            <div>
-                <label name="newLocation">Location:</label>
-                <input class="mdl-textfield__input" name="newLocation" type="text" required="true">
-            </div>
-            <div>
-                <label name="newMinCustomer">Min Customers:</label>
-                <input class="mdl-textfield__input" name="newMinCustomer" type="text" required="true">
-            </div>
-            <div>
-                <label name="newMaxCustomer">Max Customers:</label>
-                <input placehold="input new location" class="mdl-textfield__input" name="newMaxCustomer" type="text" required="true">
-            </div>
-            <div>
-                <label name="newAvgCustomer">Cookies Per Customers:</label>
-                <input class="mdl-textfield__input" name="newAvgCustomer" type="text" required="true">
-            </div>
-            <div>          
-                <button type="submit">Add Location to Table</button>
+            <legend id="input-title">Enter New Location Data</legend>
+            <div id="input-container">
+                <div>
+                    <label name="newLocation">Location Name:</label>
+                    <input class="mdl-textfield__input" name="newLocation" type="text" required="true">
+                </div>
+                <div>
+                    <label name="newMinCustomer">Min Customers:</label>
+                    <input class="mdl-textfield__input" name="newMinCustomer" type="text" required="true">
+                </div>
+                <div>
+                    <label name="newMaxCustomer">Max Customers:</label>
+                    <input placehold="input new location" class="mdl-textfield__input" name="newMaxCustomer" type="text" required="true">
+                </div>
+                <div>
+                    <label name="newAvgCustomer">Cookies Per Customers:</label>
+                    <input class="mdl-textfield__input" name="newAvgCustomer" type="text" required="true" id="cookies-input">
+                </div>
+                <div>          
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="submit-button" type="submit">Update</button>
+                </div>
             </div>
         </fieldset>
+        <p><a id="return-link" href="front.html" id="home-link">Back to our Homepage!</a>
     </form>
-    <p><a href="front.html">Back to our Homepage!</a>
     </p>
     <p></p>
 </body>
