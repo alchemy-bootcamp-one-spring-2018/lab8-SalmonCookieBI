@@ -7,6 +7,7 @@ header {
   display: grid;
   grid-template-columns: 10px 1fr 2fr 3fr 2fr 10px;
   grid-template-rows: 10px 1fr 10px;
+  background: #FAD6C2;
 }
 
 #nav-logo {
@@ -27,7 +28,8 @@ header {
 .content-container {
   position: relative;
   display: block;
-  background-color: red;
+  background-color: #6E6E70;
+  color: white;
   z-index: 1;
 }
 
@@ -58,17 +60,52 @@ header {
   font-size: .8em;
   justify-self: end;
 }
+#sign-in>section {
+  margin-bottom: 10px;
+}
 
 #sign-in button {
-  margin: 10px;
+  float: right;
 }
 
 
 .content {
-  max-width: 750px;
+  display: grid;
+  grid-template-columns: 2fr 300px 1fr 300px 1fr 300px 2fr;
+  grid-template-rows: 200px 300px 100px 200px;
 }
 
-.parallax-container {
+#feature-1 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#feature-2 {
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+
+#feature-3 {
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+
+#feature-1-caption {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+#feature-2-caption {
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+}
+
+#feature-3-caption {
+  grid-column: 6 / 7;
+  grid-row: 3 / 4;
+}
+
+#parallax-container-1 {
   display: flex;
   flex: 1 0 auto;
   position: relative;
@@ -81,10 +118,27 @@ header {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)
   ),
-   no-repeat center center fixed 
-   url(images/bg.jpg);
-  background-size: cover;  
+  no-repeat center center
+  url(images/bg.jpg);
+  background-size: cover;
+}
 
+#parallax-container-2 {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  ),
+  no-repeat center center
+  url(images/bake-bg.jpg);
+  background-size: cover;
 }
 
 footer {
