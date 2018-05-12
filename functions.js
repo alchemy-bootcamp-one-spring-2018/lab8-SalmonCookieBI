@@ -1,4 +1,4 @@
-/* exported stores */
+/* exported stores addNewStore*/
 'use strict';
 
 // This array will keep track of the totals per hour for all stores
@@ -71,5 +71,12 @@ const stores = [
     new Store('Waterfront', 2, 16, 4.6)
 ];
 
-
+// this function is called by the button on the HTML form
+function addNewStore(newLocation, newMin, newMax, newAverage) {
+    const parentElement = document.getElementById ('table-header');
+    const newStore = new Store (newLocation, newMin, newMax, newAverage);
+    stores.push(newStore);
+    newStore.createValueArray();
+    newStore.writeRow(parentElement);
+}
 
