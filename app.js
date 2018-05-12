@@ -22,6 +22,7 @@ function submitLocationData(event) {
     arrayOfLocationObjects.push(new Location(locationInput, minimum, maximum, averageCookies));
     console.log('inputs are:', locationInput, minimum, maximum, averageCookies);
     console.log(arrayOfLocationObjects);
+    locationColumn();
 }
     
     
@@ -54,6 +55,7 @@ hoursHeader();
 
 function locationColumn() {
     var parent = document.querySelector('tbody');
+    parent.textContent = '';
     for(var i = 0; i < arrayOfLocationObjects.length; i++) {
         var totalCookies = 0;
         var child = document.createElement('tr');
