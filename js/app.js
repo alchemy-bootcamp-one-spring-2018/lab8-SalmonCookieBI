@@ -41,7 +41,7 @@ if(localStorage.cookieArray) {
 // Get some random digits
 for(let i in cookieArray) {
     console.log(i);
-    cookieArray[i].cookieData();
+    cookieData(cookieArray[i]);
 }
 
 
@@ -76,7 +76,7 @@ function randomize() {
     clear();
     localStorage.clear();
     for(let i in cookieArray) {
-        cookieArray[i].cookieData();
+        cookieData(cookieArray[i]);
     }
     update();
 }

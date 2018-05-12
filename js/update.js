@@ -7,6 +7,6 @@ function update() {
             footer();
             continue;
         }
-        cookieArray[i].renderMe();
+        renderMe(cookieArray[i]);
     }
 }
