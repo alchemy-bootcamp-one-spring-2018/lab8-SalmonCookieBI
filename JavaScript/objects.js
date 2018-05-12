@@ -41,6 +41,13 @@ function addTotals() {
         }
     }
 }
+
+for(let i = 0; i < locationsArray.length; i++){
+    for(let j = 0; j < timesArray.length; j++){
+        locationsArray[i].customerAvg(j);
+    }
+}
+
 function removeOldTotals(){
     var node1 = document.getElementById('footRow');
     node1.parentNode.removeChild(node1);
@@ -52,7 +59,12 @@ function submitLocationData(event) {
     var min = parseInt(event.target.min.value);
     var max = parseInt(event.target.max.value);
     var average = parseInt(event.target.average.value);
-    locationsArray.push(new Salmon(newLocation, min, max, average));
+    let newObject = new Salmon(newLocation, min, max, average);
+    for(let i = 0; i < timesArray.length; i++){
+        newObject.customerAvg(i);
+    }
+    console.log(newObject);
+    locationsArray.push(newObject);
     removeOldTotals();
     displayBody();
     addTotals();
