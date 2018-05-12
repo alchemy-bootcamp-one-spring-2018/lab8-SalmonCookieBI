@@ -9,6 +9,36 @@ body {
     background-color: #D5EEFF;
 }
 
+footer {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: #78BBE6;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 12px;
+}
+
+#home-description {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+#home-description p {
+    font-size: 20px;
+}
+
+#home-header {
+    font-size: 35px;
+}
+
+#home-promise {
+    font-size: 30px;
+}
+
 .content {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -140,11 +170,6 @@ body {
     justify-content: center;
 }
 
-legend {
-    font-weight: bold;
-    font-size: 25px;
-}
-
 /* https://www.w3schools.com/css/css_navbar.asp */
 nav {
     position: -webkit-sticky; /* Safari */
@@ -170,11 +195,6 @@ nav ul li {
 
 fieldset {
     border-style: 5px solid black;
-}
-
-#story {
-    display: block;
-    width: 500px;
 }
 
 header {
