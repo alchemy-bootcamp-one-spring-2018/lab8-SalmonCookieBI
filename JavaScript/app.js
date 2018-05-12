@@ -1,4 +1,4 @@
-/* globals  calculateRandom locationsArray timesArray */
+/* globals  totals addTotals locationsArray timesArray */
 'use strict';
 
 function displayHeader() {
@@ -12,7 +12,6 @@ function displayHeader() {
     for(let j = 0; j < timesArray.length; j++){
         var grandChild = document.createElement('td');
         child.appendChild(grandChild);
-
         grandChild.textContent = timesArray[j];
     }
 }
@@ -26,38 +25,28 @@ function displayBody() {
         tbody.appendChild(child);
         child.appendChild(local);
         local.textContent = locationsArray[i].locationName;
-
         for(let j = 0; j < timesArray.length; j++){
             var grandChild = document.createElement('td');
             child.appendChild(grandChild);
-
-            locationsArray[i].customerAvg();
-            
             grandChild.textContent = locationsArray[i].customer[j];
         }
-
     }
-
 }
 
 function displayFooter() {
     var tfoot = document.getElementById('tfoot');
     var parent = document.createElement('tr');
+    parent.id = 'footRow';
     var label = document.createElement('td');
     tfoot.appendChild(parent);
     parent.appendChild(label);
     label.textContent = 'Total:';
-
     for(let i = 0; i < timesArray.length; i++) {
-        
         var child = document.createElement('td');
-        // var totals = document.createElement('td');
-        // child.appendChild(totals);
         parent.appendChild(child);
-        
-        child.textContent = locationsArray[i];
+        addTotals();
+        child.textContent = totals[i];
     }
-    
 }
 
 
