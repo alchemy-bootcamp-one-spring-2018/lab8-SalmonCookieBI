@@ -4,14 +4,28 @@ body {
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     color: #194769;
-    background-color: #F6F6E9
+    background-color: #F6F6E9;
+    background-size: 120%;
+    background-position: -310px -150px
     
+}
+
+#fish{
+    position: relative;
+}
+
+.inline-display{
+    display: inline;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.5em;
-    color: #194769;
+    color: white
+}
+
+#main-header{
+    color: #194769
 }
 
 thead, th {
@@ -41,7 +55,7 @@ td {
 
 #submit-button{
     background-color:#194769;
-    text-align: center;
+    justify-content: center;
 }
 
 #return-link{
