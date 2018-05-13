@@ -3,9 +3,9 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <title>Sales</title>
+    <title>Saumon's Sales Data</title>
 </head>
-<body>
+<body id="sales">
 
     <section id="logo">
         <a id="sales-link" href="/index.html">Home</a>
@@ -24,24 +24,24 @@
     </nav>
 
     <section id="data-body">
-        <h1>Saumon's Cookies: Sales Data</h1>
         <section id="form">
+        <h1>Saumon's Cookies: Sales Data</h1>
             <fieldset>
-                <legend> <strong>Enter New Store</strong></legend>
+                <legend>Enter New Store</legend>
                 <label>
-                    Store Location
+                    Store Location:
                     <input type="text" name="store" id="store-location"><br>
                 </label>
                 <label>
-                    Minimum Customers Per Hour   
+                    Minimum Customers Per Hour:
                     <input type="text" name="min" id="min-customers"><br> 
                 </label>
                 <label>
-                    Maximum Customers Per Hour
+                    Maximum Customers Per Hour:
                     <input type="text" name="max" id="max-customers"><br>
                 </label>
-                <label>
-                    Average Cookies Per Sale
+                <label id="last-box">
+                    Average Cookies Per Sale:
                     <input type="text" name ="avg" id="avg-cookie"><br>
                 </label>
                 <button id="submit-data" onclick="addNewStore()">Add New Store</button>
