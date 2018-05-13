@@ -1,4 +1,6 @@
 'use strict';
+
+
 /* globals Stores */
 /* exported createHeader */
 
@@ -10,6 +12,7 @@ arrStores[1] = new Stores('Pioneer Square', 3, 24, 1.2);
 arrStores[2] = new Stores('Powell\'s', 11, 38, 3.7);
 arrStores[3] = new Stores('St. John\'s', 20, 38, 2.3);
 arrStores[4] = new Stores('Waterfront', 2, 16, 4.6);
+
 
 //var footerRow = ['TOTAL', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', 'TEST', 'test'];
 
@@ -60,14 +63,14 @@ function createFooter() {
 
 
 
-var arrSumCol = [];
+/* var arrSumCol = [];
 
 
 var checkOnClick = document.getElementById('sum-table');
 checkOnClick.addEventListener('click', function(){
     //sumRow();
     sumCol();
-});
+}); */
 
 /* 
 // var arrSumRow = new Array();
@@ -100,7 +103,7 @@ function sumRow() {
 } */
 
 
-
+/* 
 // locates table via querySelector, loads table.onclick (using to test)
 // function locates table and then tr tags
 // loops through td data, parses to return a floating point number
@@ -208,7 +211,7 @@ function sumCol() {
     console.log('Sums from 14th column: ' + sumCol14);
     console.log('Sums from 15th column: ' + sumCol15);
 }
-
+ */
 
 
 createHeader();
