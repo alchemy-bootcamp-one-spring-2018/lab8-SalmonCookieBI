@@ -1,4 +1,4 @@
-/* exported stores */
+/* exported stores collectNewStore*/
 
 'use strict';
 
@@ -105,7 +105,5 @@ function collectNewStore(event) {
     addNewStore(newStoreName, newStoreMin, newStoreMax, newStoreAverage);
 }
 
-// event listener(s)
-var addForm = document.getElementById('add-form');
-addForm.addEventListener('submit', collectNewStore);
+
 

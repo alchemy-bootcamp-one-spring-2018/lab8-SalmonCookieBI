@@ -1,6 +1,10 @@
-/* globals stores addTableRow hourlyTotals hoursArray */
+/* globals stores addTableRow hourlyTotals hoursArray collectNewStore*/
 
 'use strict';
+
+// event listener(s)
+var addForm = document.getElementById('add-form');
+addForm.addEventListener('submit', collectNewStore);
 
 var parentElement;
 
