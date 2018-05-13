@@ -76,30 +76,27 @@ function populateFooter(array) {
     tfoot.appendChild(clone);
     
 }
+
 function addRow(event) {
     event.preventDefault();
-    //const formElement = document.querySelector('form');
     const inputName = event.target.location.value;
     const inputMin = parseInt(event.target.min.value);
     const inputMax = parseInt(event.target.max.value);
     const inputAvg = parseFloat(event.target.avg.value);
 
     const newShop = new BizData(inputName, inputMin, inputMax, inputAvg);
-    // console.log(newShop);
     const newShopArray = [newShop];
     randomCustomerAmount(newShopArray);
     
     populateTable(newShopArray);
 
     const shopFoot = document.querySelector('tfoot');
-    // console.log('footer', shopFoot);
     const shopData = shopFoot.querySelectorAll('td');
 
     for(let i = 0; i < 14; i++) {
         hourlyTotal[i] += newShop.cookies[i];
         shopData[i + 1].textContent = hourlyTotal[i];
     }
-    // window.open('index.html');
 }
 
 randomCustomerAmount(shops);
@@ -108,3 +105,4 @@ populateFooter(shops);
 
 const submit = document.getElementById('add-row-form');
 submit.addEventListener('submit', addRow);
+
