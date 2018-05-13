@@ -133,6 +133,10 @@ footer {
     padding-top: 20px;
 }
 
+#contact-text {
+    font-size: 20px;
+}
+
 #picture {
     padding-top: 20px;
     margin: auto;
@@ -194,7 +198,11 @@ nav ul li {
 }
 
 fieldset {
-    border-style: 5px solid black;
+    border-style: 8px solid black;
+}
+
+label {
+    font-size: 14px;
 }
 
 header {
@@ -215,29 +223,48 @@ header {
 
 #form {
     font-family: Arial, Helvetica, sans-serif;
-    width: 375px;
+    width: 421px;
     background-color: #D5EEFF;
+}
+
+#submit-data {
+    background-color: #FF895D;
+    border-bottom: 3px solid;
 }
 
 /* https://stackoverflow.com/questions/9402856/how-to-put-table-in-the-center-of-the-page-using-css */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item */
 #table {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 450px;
+    width: 100%;   
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #D5EEFF;
+    justify-content: center;   
+    background-color: #FF895D;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables */
 table {
     border-collapse: collapse;
+    border-top: 4px solid black;
 }
 
-thead tr th {
+thead, tr th {
     background-color: #D5EEFF;
+}
+
+/* How to color alternating rows to improve readability of large tables */
+/* https://www.w3.org/Style/Examples/007/evenodd.en.htm */
+
+tr:nth-child(even) {
+    background: #D5EEFF;
+}
+
+/* How to put a different color on rows of the last column */
+/* https://www.techonthenet.com/css/selectors/last_child.php */
+
+td:last-child {
+    background-color: #78BBE6; 
 }
 
 th, td {
@@ -249,6 +276,11 @@ th, td {
 tfoot {
     border-top: 3px solid black;
     font-weight: bold;
+    background-color: #D5EEFF;
+}
+
+#table-foot {
+    background-color: #78BBE6;
 }
 
 #data-body {
