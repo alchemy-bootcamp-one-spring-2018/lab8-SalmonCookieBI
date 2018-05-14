@@ -6,38 +6,49 @@
 section{
     text-align: center;
     font-size: 50px;
-    background-color: grey;
+    background-color: rgb(158, 109, 63);
     margin-top: -5px;
+    
 }
-/* 
-button[type=submit] {
-    width: 100%;
-    background-color: rgb(240, 129, 101);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
+a{
+    color: rgb(255, 126, 111);
+}
+a:hover{
+    color: lightpink;
+}
+.quotes {
+    background-color: grey;
     border-radius: 2px;
-    cursor: pointer;
-} */
+    height: 130px;
+    text-align: center;
+    font-display: flex;
+    flex-wrap: wrap;
+}
 div {
     display: flex;
     flex-direction: row;
-    background-color: grey;
     color: white;
     margin: 20px;
     padding: 20px;
-
 }
+
 h1 {
+    color: rgb(82, 27, 27);
+    background-image: url('/images/black-scales.png');
     text-align: center;
-    background-color:white;
-    margin: 0px;
+    background-color: sandybrown;
+    margin: auto;
     padding: 20px;
     font-size: 50px;
+    width:100%;
 }
+
 body {
-    background-color: salmon;
+    background-color: white;
+    margin: 0px;
+    font-family: 'Rubik', sans-serif;
+    background-image: url('/images/cookies.jpg');
+
 }
 img {
     width: 100%;
