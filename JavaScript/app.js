@@ -40,7 +40,7 @@ function displayFooter() {
     var label = document.createElement('td');
     tfoot.appendChild(parent);
     parent.appendChild(label);
-    label.textContent = 'Total:';
+    label.textContent = 'Total Cookies:';
     for(let i = 0; i < timesArray.length; i++) {
         var child = document.createElement('td');
         parent.appendChild(child);

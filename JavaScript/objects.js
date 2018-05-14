@@ -37,7 +37,7 @@ function addTotals() {
     for(let i = 0; i < timesArray.length; i++){
         totals[i] = 0;
         for(let j = 0; j < locationsArray.length; j++){
-            totals[i] += locationsArray[j].cookies[i];
+            totals[i] += locationsArray[j].cookies[i] * locationsArray[j].avg;
         }
     }
 }

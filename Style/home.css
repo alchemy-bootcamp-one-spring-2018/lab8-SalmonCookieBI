@@ -17,7 +17,7 @@ a:hover{
     color: lightpink;
 }
 .quotes {
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.753);
     border-radius: 2px;
     height: 130px;
     text-align: center;
