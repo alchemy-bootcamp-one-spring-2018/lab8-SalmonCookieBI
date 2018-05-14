@@ -1,8 +1,12 @@
+body {
+    background-color: #76b39d; 
+}
+
 h1 {
     text-align: center;
     color: cornsilk;
     margin: 50px auto 0;
-
+}
 .nav {
     list-style-type: none;
     margin: 0;
@@ -27,15 +31,6 @@ li a:hover {
     background-color: #111;
 }
 
-.address {
-    margin-right: 10px;
-    align: center;
-}
-
-body {
-    background-color: #76b39d;
-    
-}
 table, td {
     border-collapse: collapse;
     border: 1px solid darkmagenta;
@@ -45,17 +40,17 @@ table, td {
     margin: 25px auto 0;
     padding: 10px;
 }
+thead tr {
+    border: 2px solid;
+    height: 50px;
+    border: 1px solid darkmagenta;
+    padding: 5px;
+        }
 
 tbody tr {
     margin: 10px;
 }
 
- thead tr {
-    border: 2px solid;
-    height: 50px;
-    border: 1px solid darkmagenta;
-    padding: 5px;
- }
  tfoot td {
     color: rgb(136, 33, 76);
     font-weight: bold;
