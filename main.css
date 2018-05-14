@@ -52,6 +52,7 @@ h2 {
     grid-row: 1 / 2;
     text-align: center;
     align-self: center;
+    font-family: 'Slabo 27px', serif;
 }
 
 #logo {
