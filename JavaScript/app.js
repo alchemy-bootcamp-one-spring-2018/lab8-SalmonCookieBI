@@ -28,7 +28,7 @@ function displayBody() {
         for(let j = 0; j < timesArray.length; j++){
             var grandChild = document.createElement('td');
             child.appendChild(grandChild);
-            grandChild.textContent = locationsArray[i].customer[j];
+            grandChild.textContent = locationsArray[i].cookies[j];
         }
     }
 }
