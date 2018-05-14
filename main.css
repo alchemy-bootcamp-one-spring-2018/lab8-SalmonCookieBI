@@ -2,44 +2,132 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(40, 111, 158);
     font-family: Arial, Helvetica, sans-serif;
+    color: #194769;
+    background-color: #F6F6E9;
+    background-size: 100%;
+    background-attachment: fixed
+
+    
+}
+
+#logo-space{
+    height: 100px
+}
+
+.front-para{
+    font-family: 'Georgia';
+    font-size: 1.2em;
+}
+
+.inline-display{
+    display: inline;
+    margin: 10px
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5em;
-    color: rgb(255, 255, 255);
+    font-family: 'Oswald', 'Arial', sans-seif;
+    font-size: 3.5em;
+    color: white;
+    margin-top: -5px
 }
 
-table {
-    border-collapse: collapse;
-    border: 2px double black;
+#main-header{
+    color: #194769
 }
 
 thead, th {
     font-family: Arial, Helvetica, sans-serif;
-    border-bottom: 2px solid black;
-    border-right: 2px solid black;
 }
 
-th {
-    background: rgb(216, 87, 173);
+#header-row {
     padding: 10px;
+    background-color: #D7EEF2
 }
 
 tbody {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    color: #194769
 }
+
 
 td {
     padding: 10px;
-    border: 2px solid black
 }
 
-tfoot {
-    background: rgb(48, 68, 184);
-    font-family: Arial, Helvetica, sans-serif;
+#table-foot{
+    background-color: #F2855E;
+    color: #F6F6E9;
+    font-weight: bold
+}
+
+#submit-button{
+    background-color:#194769;
+    position: relative;
+    left: 45px;
+}
+
+#table-link{
+    color:#F2855E;
+
+}
+
+#return-link{
+    color:#F2855E;
+    position: relative;
+    left: 27.5px;
+}
+
+#input-title{
+    text-align:center;
+    position: relative;
+    top: 12px;
+    background-color: #F6F6E9;
+}
+
+#input-container{
+    border: 1px solid rgb(218, 218, 218);
+    padding: 10px;
+}
+
+#cookies-input{
+    margin-bottom: 15px;
+}
+
+#first-para{
+    background-color: rgba(0, 0, 0, 0.404);
     color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    width: 950px
+}
+#second-para{
+    background-color: rgba(0, 0, 0, 0.404);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    width: 425px;
+    position: relative;
+    right: 262.5px
+}
+#third-para{
+    background-color: rgba(0, 0, 0, 0.404);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    width: 425px;
+    position: relative;
+    left: 262.5px;
+    bottom: 231px
+}
+
+#fb-link, #insta-link, #twitter-link{
+    position: relative;
+    bottom: 200px
 }
