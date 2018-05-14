@@ -1,4 +1,5 @@
 /* exported cookieShops */
+/* globals hours */
 
 'use strict';
 function getRandomIntInclusive(min, max){
