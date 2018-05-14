@@ -41,7 +41,7 @@ function collectNewLocation(event) {
     var StoreNameNew = document.createElement('td');
     StoreNameNew.textContent = newLocation;
     row.appendChild(StoreNameNew);
-    var cookieTotals = 0
+    var cookieTotals = 0;
     for(var i = 0; i < hours.length; i++){
         var cookieSalesNew = Math.floor(getRandomIntInclusive(newMinCustomer, newMaxCustomer) * newAvgCustomer);
         var newTdElementNew = document.createElement('td');

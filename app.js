@@ -1,13 +1,6 @@
 /* globals cookieShops */
 'use strict';
 
-//get inclusive random customer count; source: MDN
-// function getRandomIntInclusive(min, max){
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min)) + min;
-// }
-
 var attachTrElements = document.getElementById('table-body');
 var attachThElements = document.getElementById('table-head');
 var attachTrFootElements = document.getElementById('table-foot');
@@ -19,6 +12,7 @@ function tableHeaderTime(){
     attachThElements.appendChild(row);
     var th = document.createElement('th');
     th.textContent = 'LOCATIONS';
+    row.setAttribute('id', 'header-row');
     row.appendChild(th);
     for(var i = 6; i < 21; i++){
         if(i < 12){
@@ -37,6 +31,7 @@ function tableHeaderTime(){
     x++;
     var newThElementTotals = document.createElement('th');
     newThElementTotals.textContent = 'LOCATION TOTALS';
+    newThElement.setAttribute('class', '"mdl-data-table__cell--non-numeric"');
     row.appendChild(newThElementTotals);
 }
 
@@ -56,7 +51,7 @@ function tableBodyCalculate(){
             cookieTotals += cookieSales;
             var newTdElement = document.createElement('td');
             var totalElement = document.createElement('td');
-            newTdElement.setAttribute('id', 'row-' + i + ' col-' + j);
+            newTdElement.setAttribute('class', '"mdl-data-table__cell--non-numeric"');
             newTdElement.textContent = cookieSales;
             totalElement.textContent = cookieTotals;
             row.appendChild(newTdElement);
@@ -71,17 +66,18 @@ var allDailyTotals = 'All Location Totals';
 function tableFooterTotals(){
     var row = document.createElement('tr');
     attachTrFootElements.appendChild(row);
-    var th = document.createElement('th');
-    th.textContent = 'HOUR TOTALS';
+    var th = document.createElement('td');
+    th.textContent = 'HOURLY TOTALS';
     row.appendChild(th);
     for(var i = 0; i < hours.length; i++){
         var newTdElement = document.createElement('td');
         newTdElement.textContent = hourlyTotals;
+        newTdElement.setAttribute('class', '"mdl-data-table__cell--non-numeric"');
         console.log('hourlyTotals', hourlyTotals);
         row.appendChild(newTdElement);
     }
     //adding a daily total cell after hourly totals loop finishes
-    var newThElementTotals = document.createElement('th');
+    var newThElementTotals = document.createElement('td');
     newThElementTotals.textContent = allDailyTotals;
     row.appendChild(newThElementTotals);
 }
@@ -89,5 +85,3 @@ function tableFooterTotals(){
 tableHeaderTime();
 tableBodyCalculate();
 tableFooterTotals();
-
-
