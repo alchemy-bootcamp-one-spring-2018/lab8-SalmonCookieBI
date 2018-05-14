@@ -50,6 +50,7 @@ function displayFooter() {
 }
 
 
+
 displayHeader();
 displayBody();
 displayFooter();

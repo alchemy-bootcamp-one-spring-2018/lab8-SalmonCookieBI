@@ -1,4 +1,4 @@
-/* exported addTotals  randomNum timesArray locationsArray calculateRandom  */
+/* exported addTotals clearForm randomNum timesArray locationsArray calculateRandom  */
 /* globals displayFooter  displayBody*/
 
 class Salmon {
@@ -63,8 +63,11 @@ function submitLocationData(event) {
     for(let i = 0; i < timesArray.length; i++){
         newObject.customerAvg(i);
     }
+
     console.log(newObject);
+
     locationsArray.push(newObject);
+
     removeOldTotals();
     displayBody();
     addTotals();
@@ -73,3 +76,10 @@ function submitLocationData(event) {
 
 const storeEntry = document.getElementById('locationForm');
 storeEntry.addEventListener('submit', submitLocationData);
+
+
+
+// function clearForm() {
+//     document.getElementById('locationForm').reset();
+// }
+// clearForm();
