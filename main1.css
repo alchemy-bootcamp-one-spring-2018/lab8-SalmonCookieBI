@@ -68,11 +68,10 @@ header {
   float: right;
 }
 
-
 .content {
   display: grid;
   grid-template-columns: 2fr 300px 1fr 300px 1fr 300px 2fr;
-  grid-template-rows: 200px 300px 100px 200px;
+  grid-template-rows: 150px 300px 1fr 150px;
 }
 
 #feature-1 {
@@ -145,3 +144,40 @@ footer {
   background-color: #915766;
 }
 
+#location-content {
+  display: grid;
+  grid-template-columns: 2fr 300px 1fr 300px 1fr 300px 2fr;
+  grid-template-rows: 150px 1fr 50px 1fr 150px;
+}
+
+#location-0 {
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+#location-1 {
+  text-align: center;
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+}
+#location-2 {
+  text-align: center;
+  grid-column: 6 / 7;
+  grid-row: 2 / 3;
+}
+#location-3 {
+  text-align: center;
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+#location-4 {
+  text-align: center;
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+
+#location-5 {
+  text-align: center;
+  grid-column: 6 /7;
+  grid-row: 4 / 5;
+}

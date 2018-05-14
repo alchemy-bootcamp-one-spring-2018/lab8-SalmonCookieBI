@@ -10,91 +10,98 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 </head>
 <body>
-    <div id="banner">
-        <img id="banner-image" src="./images/banner.jpg">
-    </div>
-    <img src="./images/salmon.png" id="logo" width="80px">
-    <h1 id="title">Pat's Salmon Cookies</h1>
-    <h2>SALES DATA</h2>
-    <div id="form">
-        <form id="add-row-form">
-            <fieldset>
-                <legend>
-                    Add a new store to the table:
-                </legend>
-                <label>
-                    Location Name
-                </label>
-                <input id="location" name="location" value="portland" required>
-                <label>
-                    Minimum Customers Per Hour
-                </label>
-                <input id="min" name="min" value="1" type="number" required>
-                <label>
-                    Maximum Customers Per Hour
-                </label>
-                <input id="max" name="max" value="10" type="number" required>
-                <label>
-                    Average Cookies Per Sale
-                </label>
-                <input id="avg" name="avg" value="2.5" type="number" required>
-                <input type="submit" id="submit-button" value="Click to Add">
-            </fieldset>
-        </form>
-    </div>
+    <header>
+        <img id="nav-logo" src="./images/sclogo-g.png">
+        
+        <h2 id="nav">SALES DATA</h2>
+        
+        <div id="sign-out">
 
-    <div id="schedule">
-        <table id="sales-table">
-            <thead>
+            Signed In | <a href="index.html">Sign Out</a>
+        </div>
+    </header>
+    
+    <div id="content">
+        <div id="form">
+            <form id="add-row-form">
+                <fieldset>
+                    <legend>
+                        Add a new store to the table:
+                    </legend>
+                    <label>
+                        Location Name
+                    </label>
+                    <input id="location" name="location" required>
+                    <label>
+                        Minimum Customers Per Hour
+                    </label>
+                    <input id="min" name="min" type="number" required>
+                    <label>
+                        Maximum Customers Per Hour
+                    </label>
+                    <input id="max" name="max" type="number" required>
+                    <label>
+                        Average Cookies Per Sale
+                    </label>
+                    <input id="avg" name="avg" type="number" required>
+                    <input type="submit" id="submit-button" value="Click to Add">
+                </fieldset>
+            </form>
+        </div>
+
+        <div id="schedule">
+            <table id="sales-table">
+                <thead>
+                    <tr>
+                        <th>Shop Location</th>
+                        <th>6AM</th>
+                        <th>7AM</th>
+                        <th>8AM</th>
+                        <th>9AM</th>
+                        <th>10AM</th>
+                        <th>11AM</th>
+                        <th>12PM</th>
+                        <th>1PM</th>
+                        <th>2PM</th>
+                        <th>3PM</th>
+                        <th>4PM</th>
+                        <th>5PM</th>
+                        <th>6PM</th>
+                        <th>7PM</th>
+                        <th>TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- put <tr> and cell content in with JS here -->
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+
+            <template id="shop-row">
                 <tr>
-                    <th>Shop Location</th>
-                    <th>6AM</th>
-                    <th>7AM</th>
-                    <th>8AM</th>
-                    <th>9AM</th>
-                    <th>10AM</th>
-                    <th>11AM</th>
-                    <th>12PM</th>
-                    <th>1PM</th>
-                    <th>2PM</th>
-                    <th>3PM</th>
-                    <th>4PM</th>
-                    <th>5PM</th>
-                    <th>6PM</th>
-                    <th>7PM</th>
-                    <th>TOTAL</th>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td></td>
+                    <td class="darker"></td>
+                    <td class="store-total"></td>
                 </tr>
-            </thead>
-            <tbody>
-                <!-- put <tr> and cell content in with JS here -->
-            </tbody>
-            <tfoot>
-                
-            </tfoot>
-        </table>
-
-        <template id="shop-row">
-            <tr>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td></td>
-                <td class="darker"></td>
-                <td class="store-total"></td>
-            </tr>
-        </template>
+            </template>
+        </div>
     </div>
-    <a href="index.html">Back</a>
+
     <script src="bi.js"></script>
     <script src="app.js"></script>
     </body>
