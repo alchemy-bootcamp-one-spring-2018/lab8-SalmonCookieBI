@@ -1,9 +1,11 @@
 h1 { 
-    text-shadow: 2px 2px 4px #FFDE7D;
+    color: cornsilk;
+    
 }
 body {
     background-color: #76b39d;
     font-family: 'Arimo', sans-serif;
+    font-weight: bold;
     line-height: 170%;
 }
 
