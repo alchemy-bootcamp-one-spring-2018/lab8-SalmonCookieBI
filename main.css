@@ -5,23 +5,26 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #194769;
     background-color: #F6F6E9;
-    background-size: 120%;
-    background-position: -310px -150px
+    background-size: 100%;
+    background-attachment: fixed
+
     
 }
 
-#fish{
-    position: relative;
+#logo-space{
+    height: 100px
 }
 
-.inline-display{
-    display: inline;
+.front-para{
+    font-family: 'Georgia';
+    font-size: 1.2em;
 }
 
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.5em;
-    color: white
+    font-family: 'Oswald', 'Arial', sans-seif;
+    font-size: 3.5em;
+    color: white;
+    margin-top: -5px
 }
 
 #main-header{
@@ -55,11 +58,12 @@ td {
 
 #submit-button{
     background-color:#194769;
-    justify-content: center;
+    text-align: center;
 }
 
 #return-link{
     color:#F2855E;
+    justify-content: center
 }
 
 #input-title{
@@ -76,4 +80,37 @@ td {
 
 #cookies-input{
     margin-bottom: 15px;
+}
+
+#first-para{
+    background-color: rgba(0, 0, 0, 0.26);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    width: 950px
+}
+#second-para{
+    background-color: rgba(0, 0, 0, 0.26);;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    width: 425px;
+    position: relative;
+    right: 262.5px
+}
+#third-para{
+    background-color: rgba(0, 0, 0, 0.26);;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    margin: 10px;
+    width: 425px;
+    position: relative;
+    left: 262.5px;
+    bottom: 231px
 }
