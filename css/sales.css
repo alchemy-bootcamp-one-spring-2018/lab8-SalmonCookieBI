@@ -63,4 +63,9 @@ tbody tr {
      width: 225px;
      background-color: salmon;
  }
+ footer {
+    width: 100%;
+    text-align: center;
+    background-color: F6416C;
+}
 
