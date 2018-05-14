@@ -204,8 +204,11 @@ nav ul li {
     transition: 0.3s ease-in-out;
 }
 
-a {
+li a, #sales-link {
     text-decoration: none;
+}
+
+a {
     color: black;
 }
 
@@ -285,9 +288,6 @@ legend {
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item */
 #table {
     font-family: Arial, Helvetica, sans-serif;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables */
@@ -309,8 +309,9 @@ tr:nth-child(even) {
 
 /* How to put a different color on rows of the last column */
 /* https://www.techonthenet.com/css/selectors/last_child.php */
-td:last-child {
+td:last-child, #location-head {
     font-weight: bold;
+    background-color: rgb(174, 223, 255);
 }
 
 th, td {
@@ -326,7 +327,7 @@ tfoot {
 }
 
 #table-foot {
-    background-color: #D5EEFF;
+    background-color: rgb(174, 223, 255);
 }
 
 #data-body {
