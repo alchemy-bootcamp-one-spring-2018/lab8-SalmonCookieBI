@@ -7,13 +7,13 @@ class Salmon {
         this.min = min,
         this.max = max,
         this.avg = avg,
-        this.customer = [];
+        this.cookies = [];
     }
-    customerAvg(i) {
+    cookieAvg(i) {
         var min = this.min;
         var max = this.max;
         var randomNum = calculateRandom(min, max);
-        this.customer[i] = randomNum;
+        this.cookies[i] = randomNum;
     }
 }
 
@@ -37,14 +37,14 @@ function addTotals() {
     for(let i = 0; i < timesArray.length; i++){
         totals[i] = 0;
         for(let j = 0; j < locationsArray.length; j++){
-            totals[i] += locationsArray[j].customer[i];
+            totals[i] += locationsArray[j].cookies[i];
         }
     }
 }
 
 for(let i = 0; i < locationsArray.length; i++){
     for(let j = 0; j < timesArray.length; j++){
-        locationsArray[i].customerAvg(j);
+        locationsArray[i].cookieAvg(j);
     }
 }
 
@@ -61,7 +61,7 @@ function submitLocationData(event) {
     var average = parseInt(event.target.average.value);
     let newObject = new Salmon(newLocation, min, max, average);
     for(let i = 0; i < timesArray.length; i++){
-        newObject.customerAvg(i);
+        newObject.cookieAvg(i);
     }
 
     console.log(newObject);
