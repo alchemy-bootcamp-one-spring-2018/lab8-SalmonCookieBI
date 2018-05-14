@@ -20,6 +20,11 @@ body {
     font-size: 1.2em;
 }
 
+.inline-display{
+    display: inline;
+    margin: 10px
+}
+
 h1 {
     font-family: 'Oswald', 'Arial', sans-seif;
     font-size: 3.5em;
@@ -58,12 +63,14 @@ td {
 
 #submit-button{
     background-color:#194769;
-    text-align: center;
+    position: relative;
+    left: 45px;
 }
 
 #return-link{
     color:#F2855E;
-    justify-content: center
+    position: relative;
+    left: 27.5px;
 }
 
 #input-title{
