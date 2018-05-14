@@ -1,13 +1,6 @@
 /* globals cookieShops */
 'use strict';
 
-//get inclusive random customer count; source: MDN
-// function getRandomIntInclusive(min, max){
-//     min = Math.ceil(min);
-//     max = Math.floor(max);
-//     return Math.floor(Math.random() * (max - min)) + min;
-// }
-
 var attachTrElements = document.getElementById('table-body');
 var attachThElements = document.getElementById('table-head');
 var attachTrFootElements = document.getElementById('table-foot');
@@ -19,7 +12,7 @@ function tableHeaderTime(){
     attachThElements.appendChild(row);
     var th = document.createElement('th');
     th.textContent = 'LOCATIONS';
-    row.setAttribute("id", "header-row")
+    row.setAttribute('id', 'header-row');
     row.appendChild(th);
     for(var i = 6; i < 21; i++){
         if(i < 12){
