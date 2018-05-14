@@ -1,5 +1,6 @@
 'use strict';
 
+//object constructor
 class Location {
     constructor(location, minimum, maximum, avg) {
         this.location = location;
@@ -12,7 +13,7 @@ class Location {
         return Math.floor(Math.random() * (this.maximum - this.minimum) + this.minimum);
     }
 }
-
+//form data retrieving function
 function submitLocationData(event) {
     event.preventDefault();
     var locationInput = event.target.location.value;
@@ -20,8 +21,7 @@ function submitLocationData(event) {
     var maximum = parseInt(event.target.maximum.value);
     var averageCookies = parseInt(event.target.average.value);
     arrayOfLocationObjects.push(new Location(locationInput, minimum, maximum, averageCookies));
-    console.log('inputs are:', locationInput, minimum, maximum, averageCookies);
-    console.log(arrayOfLocationObjects);
+
     locationColumn();
 }
     
@@ -34,11 +34,28 @@ var waterfront = new Location('Waterfront', 2, 16, 4.6);
     
 var arrayOfLocationObjects = [pdxAirport, pioneerSquare, powells, stjohns, waterfront];
     
-
-
-//console.log(pdxAirport.randomCustomerNum(minimum, maximum));
-    
 var headerArray = ['Location', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Total'];
+
+// time slot arrays for total in footer
+var sixAm = [];
+var sevenAm = [];
+var eightAm = [];
+var nineAm = [];
+var tenAm = [];
+var elevenAm = [];
+var twelvePm = [];
+var onePm = [];
+var twoPm = [];
+var threePm = [];
+var fourPm = [];
+var fivePm = [];
+var sixPm = [];
+var sevenPm = [];
+var eightPm = [];
+
+var arrayOfHours = [sixAm, sevenAm, eightAm, nineAm, tenAm, elevenAm, twelvePm, onePm, twoPm, threePm, fourPm, fivePm, sixPm, sevenPm, eightPm];
+
+//creates header
 function hoursHeader() {
     const tHead = document.querySelector('#table-head');
     const tr = document.createElement('tr');
@@ -48,11 +65,11 @@ function hoursHeader() {
         tr.appendChild(th);
         th.textContent = headerArray[i];
     }
-    
 }
 
 hoursHeader();
 
+//populates table body with given data
 function locationColumn() {
     var parent = document.querySelector('tbody');
     parent.textContent = '';
@@ -64,9 +81,14 @@ function locationColumn() {
         for(var j = 1; j < headerArray.length; j++) {
             var cell = document.createElement('td');
             child.appendChild(cell);
-            var cookieNumbers = arrayOfLocationObjects[i].randomCustomerNum() * Math.floor(arrayOfLocationObjects[i].avg);
-            cell.textContent = cookieNumbers;
-            totalCookies += cookieNumbers;
+            if(j < headerArray.length - 1) {
+                var cookieNumbers = arrayOfLocationObjects[i].randomCustomerNum() * Math.floor(arrayOfLocationObjects[i].avg);
+                console.log('cookie num', cookieNumbers);
+                cell.textContent = cookieNumbers;
+
+                arrayOfHours[j - 1].push(cookieNumbers);
+                totalCookies += cookieNumbers;
+            }
         }
         child.appendChild(cell).textContent = totalCookies;
     }
@@ -74,39 +96,34 @@ function locationColumn() {
 
 locationColumn();
 
+//https://www.w3schools.com/jsref/jsref_reduce.asp
+function getSum(total, num) {
+    return total + num;
+}
+
+var grandTotal = 0;
+
+//inserts footer with totals
+function insertFooter() {
+    var tfoot = document.querySelector('tfoot');
+    var tr = document.createElement('tr');
+    tfoot.appendChild(tr);
+    var td = document.createElement('td');
+    tr.appendChild(td).textContent = 'Total';
+    for(var i = 0; i < arrayOfHours.length; i++) {
+        td = document.createElement('td');
+        var allLocationsTotalPh = arrayOfHours[i].reduce(getSum);
+        tr.appendChild(td).textContent = allLocationsTotalPh;
+        grandTotal += allLocationsTotalPh;
+        var gtTd = document.createElement('td');
+    }
+    tr.appendChild(gtTd).textContent = grandTotal;
+    console.log('grand total', grandTotal);
+}
+
+insertFooter();
+
+console.log('hours array', arrayOfHours);
 
 var formData = document.querySelector('form');
 formData.addEventListener('submit', submitLocationData);
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-// console.log(arrayOfLocationObjects);
-var locationTotalsArray = [];
-
-// function tableData() {
-//     var parent = document.querySelector('tr');
-
-
-
-// }
-
-//tableData();
-// var maximum;
-// function randomMaximumNum(min, max) {
-//     maximum = Math.floor(Math.random() * (max - min) + min);
-//     return maximum;  
-// }
-
-// randomMaximumNum(50, 100);
-// console.log(maximum);
