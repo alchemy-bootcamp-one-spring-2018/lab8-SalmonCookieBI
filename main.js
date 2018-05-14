@@ -20,9 +20,9 @@ function checkUserPassword(event) {
     };
 
     if(payload.username === loginKey.username && payload.password === loginKey.password) {
-        window.open('sales.html');
+        window.open('sales.html', '_self', false);
     }
     else {
-        console.log('login error');
+        alert('Incorrect Username and/or Password');
     }
 }
