@@ -65,10 +65,15 @@ function submitLocationData(event) {
     }
 
     console.log(newObject);
+    
+    function clearForm() {
+        document.getElementById('locationForm').reset();
+    }
 
     locationsArray.push(newObject);
 
     removeOldTotals();
+    clearForm();
     displayBody();
     addTotals();
     displayFooter();
@@ -77,9 +82,3 @@ function submitLocationData(event) {
 const storeEntry = document.getElementById('locationForm');
 storeEntry.addEventListener('submit', submitLocationData);
 
-
-
-// function clearForm() {
-//     document.getElementById('locationForm').reset();
-// }
-// clearForm();
