@@ -1,0 +1,53 @@
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.address {
+    margin-right: 10px;
+    align: center;
+}
+
+body {
+    background-color: #76b39d;
+    
+}
+table, td {
+    border-collapse: collapse;
+    border: 1px solid darkmagenta;
+    padding: 2px;
+    background-color: #FDB44B;
+    color: darkblue;
+    margin: 75px auto 0;
+    padding: 5px;
+}
+ thead tr {
+     border: 1px solid darkmagenta;
+ }
+
+ fieldset {
+     margin: 10px auto;
+     color: white;
+     font-family: sans-serif;
+     width: 225px;
+     background-color: salmon;
+ }
