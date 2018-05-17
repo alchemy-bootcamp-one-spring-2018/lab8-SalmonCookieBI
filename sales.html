@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" type="text/css" href="main.css">
+    <link href="http://fonts.googleapis.com/css?family=Henny+Penny|Oswald:300,400" rel="stylesheet">
+    <title>Salmon Cookies - Sales</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="row">
+            <div class="flex-item">
+    <h1>Salmon Cookies</h1>
+    <h2>Cookies Needed by Location by Hour</h2>
+
+    <form id="form">
+        <fieldset>
+            <legend>Add A Cookie Store (Location, Min # of Cookies, Max # of Cookies, Avg # of Sales</legend>
+            
+            <label name="location">Location</label>
+            <input name="location" value="Added Store" type="text">
+
+            <label name="min">Minimum</label>
+            <input name="min" value="3" type="number">
+
+            <label name="max">Maximum</label>
+            <input name="max" value="10" type="number">
+
+            <label name="avg">Average</label>
+            <input name="avg" value="3.2" type="number">
+
+            <button name="add" type="submit">Add</button>
+        </fieldset>
+    </form>
+    
+    <table id="cookie-table">
+    </table>
+            </div>
+            <p id="info"></p>
+        </div>
+    </div>
+    <script src="js/stores.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
