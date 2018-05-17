@@ -1,78 +1,317 @@
+body {
+    background-color: #D5EEFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
 #index {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: lightblue;
+    background-color: #D5EEFF;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: #78BBE6;
+    margin: auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 12px;
+}
+
+#home-description {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+#home-description p {
+    font-size: 20px;
+}
+
+#home-header {
+    font-size: 30px;
+}
+
+#home-promise {
+    font-size: 20px;
+}
+
+.content {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content h1 {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.content #salmon {
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: block;
+    margin: auto;
+}
+
+#sales-link {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+/* https://stackoverflow.com/questions/25234261/how-to-add-a-space-between-paragraphs-when-using-css-reset */
+.content p + p {
+    margin-top: 35px;
+}
+.content p {
+    display: block;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+}
+
+#old-pic {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    display: block;
+    margin: auto;
+}
+
+#caption {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+#locations, #locations-list, #new-locations {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    margin: auto;
+}
+
+#locations {
+    padding-top: 40px;
+    width: 40%;
+    font-size: 33px;
+}
+
+.bold {
+    float: right;
+    margin-right: 150px;
+    font-weight: normal;
+}
+
+#locations-list {
+    padding-left: 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    width: 40%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#new-locations {
+    width: 40%;
+    padding-bottom: 100px;
+    font-size: 16px;
+}
+
+#contact {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: block;
+    margin: auto;
+    width: 40%;
+    padding-bottom: 100px;
+}
+
+#contact-heading {
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+#contact-text {
+    font-size: 20px;
+}
+
+#questions {
+    font-style: italic;
 }
 
 #picture {
+    padding-top: 20px;
     margin: auto;
     display: flex;
     align-items: center; 
     justify-content: center;
 }
 
-#tagline {
-    font-style: italic;
-    font-size: 40px;
+#bakery-pic {
+    padding-top: 30px;
+    margin: auto;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
-}
-
-legend {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-fieldset {
-    border-style: 5px solid black;
-}
-
-#story {
-    display: block;
-    width: 500px;
-}
-
-header {
-    background-color: azure;
 }
 
 #title {
+    margin-top: 10px;
     display: flex;
     align-items: center; 
     justify-content: center;
+    font-family: 'Roboto Slab', serif;
     font-size: 50px;
+    color: #FF895D;
 }
 
-body {
-    background-color: lightblue;
-    font-family: Arial, Helvetica, sans-serif;
+#tagline {
+    margin-top: -35px;
+    font-style: italic;
+    font-size: 20px;
+    color: #FF895D;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* https://www.w3schools.com/css/css_navbar.asp */
+nav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
+    padding-left: 0;
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    background-color: #78BBE6;
+}
+
+nav ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+li a, #sales-link {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+li:hover {
+    transition: 0.2s ease-in-out;
+    background-color: #FF895D;
+}
+
+fieldset {
+    border-style: 8px solid black;
+}
+
+label {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+header {
+    background-color: #D5EEFF;
+}
+
+.imgbox {
+    display: flex;
+}
+
+/* https://stackoverflow.com/questions/1891857/how-do-you-stretch-an-image-to-fill-a-div-while-keeping-the-images-aspect-rat */
+.center-fit {
+    width: 100%;
+    flex: 1;
+    align-self: center;
+    overflow: auto;
 }
 
 #form {
     font-family: Arial, Helvetica, sans-serif;
-    width: 375px;
-    background-color: lightblue;
+    width: 400px;
+    background-color: #D5EEFF;
+    padding-bottom: 35px;
+}
+
+#form h1 {
+    font-size: 24px;
+}
+
+label {
+    display: block;
+}
+
+#last-box {
+    padding-bottom: 15px;
+}
+
+input {
+    display: block;
+    float: right;
+}
+
+legend {
+    font-weight: bold;
+}
+
+#submit-data {
+    width: 100%;
+    float: right;
+    display: block;
+    background-color: rgb(255, 170, 139);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
 }
 
 /* https://stackoverflow.com/questions/9402856/how-to-put-table-in-the-center-of-the-page-using-css */
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox#Center_item */
 #table {
     font-family: Arial, Helvetica, sans-serif;
-    width: 100%;
-    height: 450px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightblue;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables */
 table {
     border-collapse: collapse;
+    border-top: 4px solid black;
+    background-color: rgb(255, 195, 173);
 }
 
-thead tr th {
-    background-color: lightblue;
+thead, tr th {
+    background-color: #D5EEFF;
+}
+
+/* How to color alternating rows to improve readability of large tables */
+/* https://www.w3.org/Style/Examples/007/evenodd.en.htm */
+tr:nth-child(even) {
+    background: #D5EEFF;
+}
+
+/* How to put a different color on rows of the last column */
+/* https://www.techonthenet.com/css/selectors/last_child.php */
+td:last-child, #location-head {
+    font-weight: bold;
+    background-color: rgb(174, 223, 255);
 }
 
 th, td {
@@ -84,4 +323,15 @@ th, td {
 tfoot {
     border-top: 3px solid black;
     font-weight: bold;
+    background-color: #D5EEFF;
+}
+
+#table-foot {
+    background-color: rgb(174, 223, 255);
+}
+
+#data-body {
+    padding: 25px 50px 100px 50px;
+    margin: auto;
+    width: 85%;
 }
