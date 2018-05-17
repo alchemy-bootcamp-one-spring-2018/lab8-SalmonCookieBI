@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <title>Salmon Cookies</title>
+    <title>Saumon's Cookies</title>
 </head>
 <body>
     <section id="index">
-        <header>
-            <img id="picture" src="/images/salmon.png">
+            <a id="sales-link" href="/sales.html">Sales Data</a>
+            <img id="picture" src="/images/logo.png"> 
             <h1 id="title">Saumon's Cookies</h1>
-        </header>
+            <p id="tagline">What dreams are made of.</p>
 
-        <p id="tagline">Welcome to Saumon's - what dreams are made of.</p>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="locations.html">Locations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-        <fieldset id="story">
-            <legend>Our Story</legend>
-            <p>Salmon Cookie Bakery was founded in 1788 by a french american entrepreneur named Simone Saumon in Portland.
-                Since then the bakery has flourished and gained enormous fame and demand
-                and has expanded to five locations in Portland.</p>
-        </fieldset>
+        <section class="imgbox">
+            <img class="center-fit" src="/images/cookies.jpg" title=
+            "These cookies have salmon in them, and they'll be the best cookie you'll ever eat.">
+        </section>
 
-        <h3>Locations and Hours</h3>
-        <ul>
-            <li>PDX: 6AM - 7PM </li>
-            <li>Pioneer Square:  6AM - 7PM</li>
-            <li>Powell's:  6AM - 7PM</li>
-            <li>St. John's:  6AM - 7PM</li>
-            <li>Waterfront:  6AM - 7PM</li>
-        </ul>
+        <section id="home-description">
+            <h1 id="home-header">Cookies. Redefined.</h1>
+            <p>Welcome to Saumon's Cookies. We're a bakery in Portland with a local twist: all of our
+            baked goods use salmon in them. We mix both sweet and savory cookies, muffins, croissants,
+            and other assorted pastries with the meaty yet mild taste of salmon.</p>
+            <p>The local bounty of salmon in the Pacific Northwest region makes this marriage of sweet and savory
+            a no-brainer. And, of course, we practice sustainability and eco-friendly policies in the making of our
+            baked goods - it's the very least we can do.</p>
+            <p>Drop by one of our five <a href="locations.html">locations</a> in the Portland metro area and ask for a sample.</p>
+            <h1 id="home-promise">We think you're going to love it.</h1>
+        </section>
 
-        <h3>Contact Info: </h3> 
-        <ul>
-            <li>General Inquiries: 1-800-GET-FISH</li>
-            <li>Email: questions@saumons.com</li>
-        </ul>
-
-        <a href="/sales.html">Sales Data</a>
+        <footer>
+            <p>Copyright &copy; Fishy Bakeries, LLC. All Rights Reserved.</p>
+        </footer>
     </section>
 </body>
 </html>
