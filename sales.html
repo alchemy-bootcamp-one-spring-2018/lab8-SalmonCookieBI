@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cookies Sales</title>
+    <link rel="stylesheet" href="sales.css">
+</head>
+
+<body>
+
+    <h1>Pat's Salmon Cookies BI</h1>
+  
+    <div id="main-table">
+        <table>
+            <thead>
+                <tr id="table-header">
+                    <th>Location</th>
+                    <th>6am</th>                
+                    <th>7am</th>                
+                    <th>8am</th>                
+                    <th>9am</th>                
+                    <th>10am</th>                
+                    <th>11am</th>                
+                    <th>12pm</th>                
+                    <th>1pm</th>                
+                    <th>2pm</th>                
+                    <th>3pm</th>                
+                    <th>4pm</th>                
+                    <th>5pm</th>                
+                    <th>6pm</th>                
+                    <th>7pm</th>                
+                    <th>8pm</th>
+                    <th>Total</th>          
+                </tr>
+
+            </thead>
+
+            <tbody id="table-body">
+                
+            </tbody>
+    
+            <tfoot>
+                <tr id="table-footer">
+                    <td><b>Total<b></td>
+                    <td id="tf-0"></td>
+                    <td id="tf-1"></td>
+                    <td id="tf-2"></td>
+                    <td id="tf-3"></td>
+                    <td id="tf-4"></td>
+                    <td id="tf-5"></td>
+                    <td id="tf-6"></td>
+                    <td id="tf-7"></td>
+                    <td id="tf-8"></td>
+                    <td id="tf-9"></td>
+                    <td id="tf-10"></td>
+                    <td id="tf-11"></td>
+                    <td id="tf-12"></td>
+                    <td id="tf-13"></td>
+                    <td id="tf-14"></td>
+                    <td id="tf-15"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    
+    <form id="cookie-form">
+        <div id="location">
+            <b>Location:</b>
+            <input type="text" name="location"> 
+        </div>
+        <div id="min">
+            <b>Min Customers Per Hour:</b>
+            <input type="number" name="min">  
+        </div>
+        <div id="max">
+            <b>Max Customers Per Hour:</b>
+            <input type="number" name="max">  
+        </div> 
+        <div id="avg">
+            <b>Average Cookies Per Sale:</b>
+            <input type="number" name="cookies"> 
+        </div>  
+        <div id="button">
+        <button type="submit">Submit</button>
+        </div>
+    </form>
+    
+    <script src="objects.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>

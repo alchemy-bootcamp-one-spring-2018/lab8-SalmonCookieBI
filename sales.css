@@ -1,0 +1,107 @@
+body {
+    background-image: url(./images/sunset.jpeg);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    opacity: .75;
+    width: 50%;
+    color: lightgoldenrodyellow;
+    font-size: 60px;
+}
+
+img{
+    width: 30%;
+}
+
+#main-table {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border-collapse: collapse;
+    background-color: black;
+    opacity: .75;
+    color: lightgoldenrodyellow;
+    font-size: 20px;
+}
+
+td {
+    border: solid;
+    padding: 5px;
+}
+
+th {
+    border: solid;
+    padding: 5px;
+}
+
+tr {
+    border: solid;
+    padding: 5px;
+}
+
+form {
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: black;
+    opacity: .75;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 35%;
+}
+
+#location {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    color: white;
+    font-size: 20px
+}
+
+#min {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    color: white;
+    font-size: 20px
+}
+
+#max {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    color: white;
+    font-size: 20px
+}
+
+#avg {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    color: white;
+    font-size: 20px
+}
+
+#button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+}
+
+input {
+    font-size: 12px;
+    margin: 5px;
+}
+
+button {
+    font-size: 20px;
+    border-radius: 2px;
+}

@@ -1,0 +1,117 @@
+
+body {
+    background-image: url("images/sunset.jpeg");
+    background-position: center; 
+      
+}
+
+h1 {
+    
+    text-align: center;
+    font-family: Georgia;
+    font-size: 60pt
+   
+}
+
+hr {
+    border: 1px solid black; 
+}
+
+img.pics2 {
+box-shadow: 2px 5px 40px 5px rgb(96, 39, 39);      
+display: block;
+border: 3px solid;
+border-radius: 800px;
+padding: 0px;
+margin: 40px auto;
+max-width: 50%;
+max-height: 50%;
+
+}
+img {
+display: block;
+padding: 0px;
+margin: 40px auto;
+max-width: 50%;
+max-height: 50%;
+
+}
+
+h2 {
+    
+    font-size: 20pt;
+    font-family: palatino;
+}
+
+
+div.beginnings {
+    background-color: rgb(225, 191, 163);
+    overflow: scroll;
+    box-shadow: 2px 5px 40px 5px rgb(96, 39, 39);
+    position: relative;
+    top: 10px 100px;
+    height: 300px;
+    width: 400px;
+    margin: 50px 50px;
+    padding: 10px 30px;       
+    border: 2px solid black; 
+    border-radius: 60px;
+}
+
+
+div.story {
+    background-color: rgb(225, 191, 163);
+    overflow: scroll;
+    box-shadow: 2px 5px 40px 5px rgb(96, 39, 39);
+    position: relative;
+    top: 10px 100px;
+    height: 300px;
+    width: 400px;
+    float: right;
+    margin: 50px 50px;
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 60px;
+   
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14pt;
+    box-align: left;
+    position: relative;
+    top: 20px;
+    bottom: 100px;
+}
+
+address {
+    display: block;
+    position: bottom;
+    text-align: bottom;
+    line-height: .5em;
+    margin: 20px;
+}
+
+p.location {
+    font-weight: bold;
+}
+
+footer {
+    position: floating; 
+    margin-top: 30px;
+    margin: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: bottom;
+}
+
+#addresses {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
