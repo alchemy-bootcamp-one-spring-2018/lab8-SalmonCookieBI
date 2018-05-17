@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/sales.css">
+    <title>Salmon Cookie Sales</title>
+</head>
+<body>
+    <h1 align="center"> <img  src="images/salmon.png" alt="salmon" width="15%">Pat's Salmon Cookies <img  src="images/salmon.png" alt="salmon" width="15%"></h1>
+    <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="sales.html">Sales Data</a></li>
+    </ul>
+    <h1>Sales Data</h1>
+    <table>
+        <thead id="table-head">
+        </thead>
+        <tbody>
+        </tbody>
+        <tfoot>
+        </tfoot>
+    </table>
+    <form>
+        <fieldset>
+            <p>Location:</p>
+            <input id="location-input" onfocus="this.value=''" type="text" name="location">
+            
+            <p>Minimum Customers Per Hour:</p>
+            <input id="minimum" onfocus="this.value=''" type="number" name="minimum">
+
+            <p>Maximum Customers Per Hour:</p>
+            <input id="maximum" onfocus="this.value=''" type="number" name="maximum">
+
+            <p>Average Cookies Per Sale:</p>
+            <input id="average-cookies" onfocus="this.value=''" type="number" name="average">
+
+            <input id="submit" type="submit" name="submit">
+        </fieldset>
+    </form>
+    <div>
+        <footer>
+            <p>R and S &copy; 2018</p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,91 @@
+h1 { 
+    color: cornsilk;
+    
+}
+body {
+    background-color: #76b39d;
+    font-family: 'Arimo', sans-serif;
+    font-weight: bold;
+    line-height: 170%;
+}
+
+main {
+    background-color: #F8F3D4;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-right: 15%;
+    margin-bottom: 5%;
+    margin-left: 8%;
+    padding: 2%;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: F6416C;
+}
+
+#intro-text-1 {
+    margin-top: 10%;
+    margin-right: 15%;
+    margin-bottom: 3%;
+    margin-left: 20%; 
+}
+
+#intro-text-2 {
+    margin-top: 5%;
+    margin-right: 15%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+#pat {
+    float: left;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    width: 20%;
+}
+
+.make-cookies {
+    border-radius: 10px;
+    display: inline block;
+    margin-left: 10%;
+    width: 22%;
+}
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.address {
+    margin-left: 28%;
+    
+}
+
+.location {
+    margin-left: 10%;
+    margin-bottom: 1%;
+}
