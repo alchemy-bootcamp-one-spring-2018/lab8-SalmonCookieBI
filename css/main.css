@@ -1,0 +1,209 @@
+/* ANIMATIONS brah*/
+@keyframes salmon-swim {
+    0% {
+        /* transform: rotate(-15deg); */
+        background-position-x: 0;
+    } 60% {
+        /* transform: rotate(0deg); */
+        background-position-y: -30%;
+        background-position-x: 250px;
+    } 100% {
+        /* transform: rotate(-15deg); */
+        background-position-x: 500px;
+    }
+}
+
+@keyframes body-water {
+    from {
+        background: steelblue;
+    } to {
+        background: rgba(1, 31, 163, .50);
+    }
+}
+
+@keyframes title-glow {
+    from {
+        text-shadow: 0 0 0 white;
+    } to {
+        text-shadow: 0 -33px 69px steelblue;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+      background-position-x: 0px;
+    }
+  
+    100% {
+      background-position-x: -500px;
+    }
+}
+
+@keyframes hello {
+    from {
+        text-shadow: 0 0 33px black;
+    } to {
+        text-shadow: 0 0 66px black;
+    }
+}
+/* STYLING */
+
+html {
+    background-color: steelblue;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+    animation: hello 3s alternate infinite;
+}
+
+#container-main>h1 {
+    animation: title-glow 3s ease-in alternate infinite;
+    color: rgba(0,0,0,0);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#container-main {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#container-info {
+    margin-top: 13px;
+    height: 100%;
+    width: 666px;
+}
+
+.btn-link {
+    display: inline;
+    text-decoration: none;
+    border: 1px solid white;
+    background: #011F3F;
+    color: white;
+    border-radius: 3px;
+    padding: 3px;
+    font-size: 1.5rem;
+}
+
+.btn-link:hover {
+    background: steelblue;
+}
+
+input {
+    font-size: 1.5em;
+}
+
+#updates {
+    display: flex;
+    padding: 13px;
+    justify-content: space-between;
+    border: 1px solid white;
+    background: rgb(117, 51, 57);
+    color: white;
+    font-weight: bold;
+}
+
+#txt {
+    font-size: 1.5rem;
+    width: 169px;
+    margin: 0 13px 0 0;
+}
+
+#upates {
+    position: grid;
+    margin: auto;
+}
+
+#randomize-btn, #submit {
+    background: #011F3F;
+    color: white;
+    margin: auto;
+    cursor: help;
+}
+
+#randomize-btn:hover, #submit:hover {
+    background: steelblue;
+    animation: none;
+}
+
+table {
+    text-align: left;
+    border-collapse: collapse;
+    border: 1px solid white;
+    margin: 13px 0 0 0;
+    color: white;
+}
+
+#header, #body-total {
+    background: #011F3F;
+    font-weight: bold;
+    color: #F67280;
+}
+
+#body-data {
+    animation: body-water 13s ease-in alternate infinite;
+}
+
+/* hover color */
+#body-data td:hover {
+    background-color: #429ffd;
+    cursor: url("../assets/sal.cur"), crosshair;
+}
+
+#footer #body-times{
+    background: black;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+tr {
+    border: 1px solid white;
+}
+
+table td {
+    padding: 6px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+/* SALMON SHIZZ */
+#salmon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: url('../images/salmon.png');
+    animation: salmon-swim 10s linear infinite;
+    z-index: -1;
+}
+
+/* COFFEE SHIZZ */
+#coffee {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: url('../images/Cup-o-coffee-simple.png');
+    animation: slideIn 20s linear infinite;
+    z-index: -1;
+}
+
+/* hover color */
+#table-data td:hover {
+    background-color: #429FFD;
+  }
