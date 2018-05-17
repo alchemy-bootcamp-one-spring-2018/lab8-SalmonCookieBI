@@ -1,0 +1,104 @@
+html, body {
+    height: 80%;
+}
+body {
+    margin: 0;
+    background-color: #abf4f7;
+    background-image: url("https://www.transparenttextures.com/patterns/silver-scales.png");
+
+}
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-grid{
+    display: flex;
+}
+.row {
+    width: auto;
+}
+
+.col {
+    flex: 1;
+    padding: 20px;
+}
+  
+h1 {
+    font-family: 'Henny Penny', cursive;
+    color: rgb(243, 118, 216);
+    text-shadow: -2px 1px 0px rgba(0, 0, 0, 1);
+    font-size: 64px;
+    text-align: center;
+    -webkit-margin-after: 0px;
+}
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 2px solid rgb(243, 118, 216);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+p {
+    font-family: 'Domine', serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+p.review {
+    font-family: 'Domine', serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 16px;
+    line-height: 1.4em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+thead td, tfoot td {
+    background: #fff;
+    font-weight: 400;
+    padding: 0px 16px 0px 16px;
+}
+
+tr:nth-child(odd) {
+    background: #CCC;
+    }
+
+tr:nth-child(even) {
+    background: rgb(201, 245, 172);
+
+}
+
+td {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+
+.brand-name{
+    font-family: 'Henny Penny', cursive;
+    font-size: 1.2em;
+    color: rgb(243, 118, 216);
+    text-shadow: -1px 1px 0px rgba(0, 0, 0, 1);
+}
